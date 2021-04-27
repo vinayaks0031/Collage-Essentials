@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Nunito", sans-serif;
+}
+.nav {
+  border: 1px solid #e6e1c1;
+  background-color: #e6e1c1;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1%;
+}
+h1 {
+  margin: 0%;
+  padding-top: 1%;
+  /* font-family: "Bangers", cursive; */
+  font-family: "Berkshire Swash", cursive;
+}
+a {
+  text-decoration: none;
+  color: black;
+  padding: 1%;
+  background-color: #e6e1c1;
+}
+a:hover {
+  background-color: burlywood;
+}
