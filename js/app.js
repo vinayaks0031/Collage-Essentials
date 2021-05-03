@@ -20,7 +20,8 @@ let i = 0;
 function rightslide() {
   i++;
   if (i == 3) {
-    let html = ` <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
+    let html = ` <div class="trans">
+        <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
         <div class="slider">
         <button class="btn" id="lbtn" onclick="leftslide()"><i class="fas fa-arrow-left fa-2x"></i></button>
         <img src="${img[i]}" class="img-slide">
@@ -28,17 +29,20 @@ function rightslide() {
         </button>
         </div><br>
         <p> "${quote[i]}" </p>
-        <p>by  <b class="bold">${name[i]}</b></p>`;
+        <p>by  <b class="bold">${name[i]}</b></p>
+        </div>`;
     div.innerHTML = html;
   } else {
-    let html = ` <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
+    let html = ` <div class="trans">
+    <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
     <div class="slider">
     <button class="btn" id="lbtn" onclick="leftslide()"><i class="fas fa-arrow-left fa-2x"></i></button>
     <img src="${img[i]}" class="img-slide">
     <button id="rbtn" class="btn" onclick="rightslide()"><i class="fas fa-arrow-right fa-2x"></i></button>
     </div><br>
     <p> "${quote[i]}" </p>
-    <p>by  <b class="bold">${name[i]}</b></p>`;
+    <p>by  <b class="bold">${name[i]}</b></p>
+    </div>`;
     div.innerHTML = html;
   }
   console.log(i);
@@ -48,7 +52,8 @@ function leftslide() {
   i--;
   if (i == 0) {
     console.log(i);
-    let html = ` <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
+    let html = ` <div class="trans">
+        <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
         <div class="slider">
         <button class="btn" id="lbtn" onclick="leftslide()"><i style="display: none;" class="fas fa-arrow-right fa-2x"></i>
         </button>
@@ -56,17 +61,20 @@ function leftslide() {
         <button id="rbtn" class="btn" onclick="rightslide()"><i class="fas fa-arrow-right fa-2x"></i></button>
         </div><br>
         <p> "${quote[i]}" </p>
-        <p>by  <b class="bold">${name[i]}</b></p>`;
+        <p>by  <b class="bold">${name[i]}</b></p>
+        </div>`;
     div.innerHTML = html;
   } else {
-    let html = ` <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
+    let html = `<div class="trans">
+    <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
     <div class="slider">
     <button class="btn" id="lbtn" onclick="leftslide()"><i class="fas fa-arrow-left fa-2x"></i></button>
     <img src="${img[i]}" class="img-slide">
     <button id="rbtn" class="btn" onclick="rightslide()"><i class="fas fa-arrow-right fa-2x"></i></button>
     </div><br>
     <p> "${quote[i]}" </p>
-    <p>by  <b class="bold">${name[i]}</b></p>`;
+    <p>by  <b class="bold">${name[i]}</b></p>
+    </div>`;
     div.innerHTML = html;
   }
 }
