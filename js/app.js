@@ -45,13 +45,11 @@ function rightslide() {
     </div>`;
     div.innerHTML = html;
   }
-  console.log(i);
 }
 
 function leftslide() {
   i--;
   if (i == 0) {
-    console.log(i);
     let html = ` <div class="trans">
         <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
         <div class="slider">
@@ -78,3 +76,43 @@ function leftslide() {
     div.innerHTML = html;
   }
 }
+
+let Params = {
+  to_name: 'Vinayak Sharma',
+  from_name: '',
+  message_html: ''
+};
+
+let message;
+let btnmsg = document.getElementById("btnmsg");
+btnmsg.addEventListener('click', getmsg);
+
+function getmsg(e) {
+  e.preventDefault();
+  Params.message_html = document.getElementById("formquery").value;
+  // console.log(formquery);
+  let form1 = document.getElementById("contect-us");
+  form1.style.display = "none";
+  let form2 = document.getElementById("contect-us-email");
+  form2.style.display = "block";
+}
+
+let formSubmit = document.getElementById("contect-us-email");
+formSubmit.addEventListener("submit", getemail);
+
+function getemail(e) {
+  e.preventDefault();
+  Params.from_name = document.getElementById("gmailquery").value;
+  // console.log(message, gmail);
+  let p = document.createElement("p");
+  p.innerText = "Thankyou we'll contact you shortly!"
+  p.style.fontSize = "30px";
+  formSubmit.replaceWith(p);
+  emailjs.send('service_20auxhw', 'template_gi9syv2', Params)
+    .then(function (response) {
+      console.log('SUCCESS!', response.status, response.text);
+    }, function (error) {
+      console.log('FAILED...', error);
+    });
+}
+

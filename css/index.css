@@ -158,7 +158,7 @@ div.slider {
 .footer{
   height: 490px;
   background-color: #e75858;
-  margin: 2% 1% 0% 1%;
+  margin: 0% 1% 0% 1%;
   text-align: center;
   color: white;
 }
@@ -183,7 +183,7 @@ div.slider {
   font-size: 25px;
 }
 
-.contect-us input[type="text"]{
+.contect-us input{
   width: 30%;
   height: 50px;
   border: none;
@@ -203,6 +203,10 @@ div.slider {
 }
 
 .fa-1x{
+  color: rgb(182, 179, 179);
+}
+
+.fa-1x:hover{
   color: #e75858;
 }
 
@@ -220,6 +224,10 @@ div.slider {
 
 .giticon{
   color: white;
+}
+
+#contect-us-email{
+  display: none;
 }
 
 /*
