@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Nunito", sans-serif;
+}
+.head{
+    width: 100%;
+    background-color: #e6e1c1;
+    text-align: center;
+    border-bottom:1px solid rgb(238, 209, 171);
+}
+
+.head>a{
+    text-decoration: none;
+    color: black;
+}
+
+h1{
+    margin: 0%;
+    padding: 2% 0% 2% 0%;
+  /* font-family: "Bangers", cursive; */
+  font-family: "Berkshire Swash", cursive;
+}
+.nav{
+    background-color: #e6e1c1;
+    width: 100%;
+    text-align: center;
+    padding: 1%;
+    position: sticky;
+    top: 0;
+}
+b > a{
+    padding: 1%;
+    text-decoration: none;
+    color: black;
+}
+b>a:hover{
+    background-color: burlywood;
+    transform: 0.5s ease;
+}
+
+img{
+  padding: 3% 0% 3% 60%;
+  height: 450px;
+}
+
+.footer{
+    height: 490px;
+    background-color: #e75858;
+    margin: 0% 1% 0% 1%;
+    text-align: center;
+    color: white;
+  }
+
+  
+  .footer-heading{
+    font-size: 40px;
+    padding-top:2%;
+    
+  }
+  
+  /* .footer-content{
+    font-family: "Nunito", sans-serif;
+  
+  } */
+  
+  .contect-us{
+    font-size: 25px;
+  }
+  
+  .contect-us > input{
+    width: 30%;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+  
+  }
+  
+  
+  .btnform{
+    height: 50px;
+    padding: 0px 14px;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    background-color: white;
+  
+  }
+  
+  .fa-1x{
+    color: rgb(182, 179, 179);
+  }
+  
+  .fa-1x:hover{
+    color: #e75858;
+  }
+  
+  .last{
+    margin: 0% 10%;
+    padding: auto;
+    text-align: left;
+    display:flex;
+  }
+  
+  
+  .last>div{
+    margin: auto;
+  }
+  
+  .giticon{
+    color: white;
+  }
+  
+  #contect-us-email{
+    display: none;
+  }

@@ -72,9 +72,9 @@ b > a:hover {
   display: flex;
 }
 
-.svg {
+.text>img {
   padding: 4% 0% 0% 15%;
-  width: 600px;
+  width: 40%;
   /* position: fixed; */
 }
 
@@ -126,7 +126,7 @@ i.fa-5x {
   text-align: center;
 }
 
-div.slider {
+.slider {
   display: flex;
   text-align: center;
 }
@@ -174,16 +174,16 @@ div.slider {
   
 }
 
-.footer-content{
+/* .footer-content{
   font-family: "Nunito", sans-serif;
 
-}
+} */
 
 .contect-us{
   font-size: 25px;
 }
 
-.contect-us input{
+.contect-us > input{
   width: 30%;
   height: 50px;
   border: none;
