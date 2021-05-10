@@ -2,15 +2,17 @@
     box-sizing: border-box;
 }
 body{
+  align-items: center;
+  justify-content: center;
     margin: 0%;
     padding: 0%;
     font-family: "Nunito", sans-serif;
 }
 .head{
     width: 100%;
-    background-color: #e6e1c1;
+    background-color: #3c75df;
     text-align: center;
-    border-bottom:1px solid rgb(238, 209, 171);
+    padding:2% 0% 2% 0% ;
 }
 
 .head>a{
@@ -20,12 +22,13 @@ body{
 
 h1{
     margin: 0%;
-    padding: 2% 0% 2% 0%;
+    padding: 1% 0% 1% 0%;
   /* font-family: "Bangers", cursive; */
   font-family: "Berkshire Swash", cursive;
+  color: white;
 }
 .nav{
-    background-color: #e6e1c1;
+    background-color: #3c75df;
     width: 100%;
     text-align: center;
     padding: 1%;
@@ -35,16 +38,97 @@ h1{
 b > a{
     padding: 1%;
     text-decoration: none;
-    color: black;
+  color: white;
+    
 }
 b>a:hover{
-    background-color: burlywood;
+    background-color: #4191db;
     transform: 0.5s ease;
 }
 
-img{
-  padding: 3% 0% 3% 60%;
-  height: 450px;
+
+
+.con-card{
+  background-image: url("../logo-images/Abract01.png");
+  background-repeat: no-repeat ;
+  background-position: right;
+  width: 100%;
+  /* justify-content: center;
+  align-items: center; */
+  display: flex;
+  padding: auto;
+  height: 100vh;
+  /* margin: 1% 1% 0% 1%; */
+}
+
+.con-card .card{
+  margin: auto;
+  height: 215px;
+  width: 32vh; 
+  text-align: center;
+  /* display: flex;
+  flex-direction: column  ; */
+  border: 2px solid #3c75df;
+  /* background: #ebf1f7; */
+  padding: 20px 15px;
+  color: white;
+  box-shadow : 0 15px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+}
+
+.con-card .card:hover{
+height: 420px;
+color: black;
+}
+
+.con-card .card .img{
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgb(0,0,0,0.2);
+}
+
+.card img{
+  height: 200px;
+  width: 200px;
+  border-radius: 4px;
+}
+
+.con-card .card .content{
+  margin-top: -140px;
+  /* padding:10px 15px; */
+  visibility: hidden; 
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.con-card .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -1px;
+    transition-delay: 0.3s ;
+}
+
+.content .btnbook{
+  border: 1px solid #4191db;
+  padding: 7px 12px 7px 12px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.content .btnbook:hover{
+  border: 2px solid white;
+  background-color: #4191db;
+  color: white;
+  padding: 10px 15px 10px 15px;
+}
+
+
+.list{
+  height: 100vh;
+  background-image: url("../logo-images/Abract02.png");
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 .footer{

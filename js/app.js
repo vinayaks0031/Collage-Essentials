@@ -84,13 +84,12 @@ let Params = {
   message: ''
 };
 
-let btnmsg = document.getElementById("btnmsg");
-btnmsg.addEventListener('click', getmsg);
+let form1 = document.getElementById("contect-us");
+form1.addEventListener('submit', getmsg);
 
 function getmsg(e) {
   e.preventDefault();
   Params.message = document.getElementById("formquery").value;
-  let form1 = document.getElementById("contect-us");
   form1.style.display = "none";
   let form2 = document.getElementById("contect-us-email");
   form2.style.display = "block";
