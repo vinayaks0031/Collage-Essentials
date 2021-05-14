@@ -1,5 +1,5 @@
 {
-    "semester": [
+    "semester1": [
         "Information technology",
         "Methamatical foundation of CS",
         "Programming and problem solving in c",
@@ -30,5 +30,20 @@
         "Elective-I : E1(C) Managerial Economics",
         "Elective-I : E1(D) Advanced DataBase Management System",
         "Elective-I : E1(E) Microprocessor and Interfaces"
+    ],
+    "semester5": [
+        "Data Warehousing and Mining",
+        "UNIX & Shell Programming",
+        "Cloud Computing",
+        "Elective-II : E-II(a) : Modeling & Simulation",
+        "Elective – II: EII(b) Organizational Behaviour",
+        "Elective II : EII(c) : Soft Computing",
+        "Elective II : E-II(d) : Network Programming",
+        "Elective II : EII(e) : .Net Technology",
+        "Elective-III : EIII (a) Distributed Systems",
+        "Elective- III : EIII(b ) Computer Vision and Digital Image Processing",
+        "Elective- III : EIII(c ) Bioinformatics",
+        "Elective III : EIII(d) : Embedded Systems",
+        "Elective-III : EIII (e) Network Security"
     ]
 }
