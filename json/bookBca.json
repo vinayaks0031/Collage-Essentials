@@ -1,44 +1,49 @@
 {
     "semester1": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Mathematics -I",
+        "Statistics -I",
+        "Physics -I",
+        "Programming & Problem solving through C -I",
+        "PC Software",
+        "English"
     ],
     "semester2": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Mathematics -II",
+        "Statistics -II",
+        "Physics -II",
+        "Programming & Problem solving through C -II",
+        "Introduction to Information System",
+        "Hindi"
     ],
     "semester3": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Mathematics -III",
+        "Object Oriented Programming Through C++",
+        "Digital Computer Electronics",
+        "Accounting & Financial Mgt",
+        "Data Structure using C++",
+        "Communicational Skills"
     ],
     "semester4": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Coordinate Geometry of Three Dimension",
+        "Database Management System",
+        "Data & Network Communication",
+        "Digital Computer Organization",
+        "Unix Operating System ",
+        "Environmental Awareness"
     ],
     "semester5": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Introduction to JAVA",
+        "Computer Organization and Architecture",
+        "Software Eng",
+        "Discrete Mathematics & Linear algebra",
+        "Web Designing & web Technology",
+        "Entrepreneurship"
     ],
     "semester6": [
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Computer Graphics & Multimedia",
+        "Computer Oriented Numerical Methods",
+        "Microprocessor & assembly language Programming ",
+        "Principles and Practices of Management",
+        "Computer Graphics Practical"
     ]
 }
