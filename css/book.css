@@ -27,7 +27,7 @@ h1{
   font-family: "Berkshire Swash", cursive;
   color: white;
 }
-.nav{
+.navbar{
     background-color: #3c75df;
     width: 100%;
     text-align: center;
@@ -35,14 +35,14 @@ h1{
     position: sticky;
     top: 0;
 }
-b > a{
+.bnav > a{
     padding: 1%;
     text-decoration: none;
   color: white;
     
 }
-b>a:hover{
-    background-color: #4191db;
+.bnav>a:hover{
+    background-color: #324cda;
     transform: 0.5s ease;
 }
 
@@ -57,12 +57,13 @@ b>a:hover{
   align-items: center; */
   display: flex;
   padding: auto;
-  height: 100vh;
-  /* margin: 1% 1% 0% 1%; */
+  height: 90vh;
+  margin: 0;
 }
 
 .con-card .card{
   margin: auto;
+  /* margin-top:15% ; */
   height: 215px;
   width: 32vh; 
   text-align: center;
@@ -125,12 +126,52 @@ color: black;
 
 
 .list{
-  height: 100vh;
+  height: 80vh;
   background-image: url("../logo-images/Abract02.png");
   background-position: left;
   background-repeat: no-repeat;
+  display: flex;
+  padding: auto;
 }
 
+.semester{
+  width: 45%; 
+  text-align: center;
+  padding: 40px;
+  margin: 7% 3% auto 3%;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+.semester ul{
+  list-style-type: none;
+}
+.semester ul>h2{
+  width: 140px;
+   border-bottom: 2px solid black;
+   color: white;
+}
+
+
+.semester ul li{
+  padding: 2%;
+  margin: 2%;
+ 
+}
+
+li:hover{
+  background-color:#3c75df;
+}
+
+li b >a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+li:hover b >a{
+  color: white;
+}
 .footer{
     height: 490px;
     background-color: #e75858;

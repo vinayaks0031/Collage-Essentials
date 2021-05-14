@@ -50,14 +50,15 @@ h1,h2 {
   font-family: "Berkshire Swash", cursive;
 }
 
-b > a {
+.nav b > a {
   text-decoration: none;
   color: black;
   padding: 1%;
   background-color: #e6e1c1;
+  cursor: pointer;
 }
 
-b > a:hover {
+.nav b > a:hover {
   background-color: burlywood;
   transition: 0.5s ease;
 }
@@ -82,7 +83,7 @@ b > a:hover {
   margin: 2% 1% 0% 1%;
   padding: auto;
   height: 70vmin;
-  background-color: #91adbb;
+  background-color: #5085b6;
   display: flex;
 }
 

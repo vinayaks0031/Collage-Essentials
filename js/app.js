@@ -1,5 +1,74 @@
 console.log("hey there");
 
+// let navBook = document.getElementById("navbook");
+// navBook.addEventListener('click', bookPage);
+
+// function bookPage() {
+//   const xml = new XMLHttpRequest();
+//   xml.open('GET', 'html/book.html', true);
+//   xml.onload = function () {
+//     if (this.status == 200) {
+//       document.body.innerHTML = this.response;
+//     }
+//     else {
+//       console.log('bad request 404');
+//     }
+//   }
+//   xml.send();
+// }
+
+// let navSyllabus = document.getElementById("navsyllabus");
+// navSyllabus.addEventListener('click', syllabusPage);
+
+// function syllabusPage() {
+//   const xml = new XMLHttpRequest();
+//   xml.open('GET', 'html/sullabus.html', true);
+//   xml.onload = function () {
+//     if (this.status == 200) {
+//       document.body.innerHTML = this.response;
+//     }
+//     else {
+//       console.log('bad request 404');
+//     }
+//   }
+//   xml.send();
+// }
+
+// let navNotes = document.getElementById("navnotes");
+// navNotes.addEventListener('click', notesPage);
+
+// function notesPage() {
+//   const xml = new XMLHttpRequest();
+//   xml.open('GET', 'html/notes.html', true);
+//   xml.onload = function () {
+//     if (this.status == 200) {
+//       document.body.innerHTML = this.response;
+//     }
+//     else {
+//       console.log('bad request 404');
+//     }
+//   }
+//   xml.send();
+// }
+
+// let navPapers = document.getElementById("navpapers");
+// navPapers.addEventListener('click', paperPage);
+
+// function paperPage() {
+//   const xml = new XMLHttpRequest();
+//   xml.open('GET', 'html/examPaper.html', true);
+//   xml.onload = function () {
+//     if (this.status == 200) {
+//       document.body.innerHTML = this.response;
+//     }
+//     else {
+//       console.log('bad request 404');
+//     }
+//   }
+//   xml.send();
+// }
+
+
 let div = document.querySelector("div.slide");
 let img = [
   "logo-images/billgate.jpg",

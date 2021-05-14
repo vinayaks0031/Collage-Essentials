@@ -1,0 +1,34 @@
+{
+    "semester": [
+        "Information technology",
+        "Methamatical foundation of CS",
+        "Programming and problem solving in c",
+        "computer organization abs assembly language programming",
+        "Communication skills"
+    ],
+    "semester2": [
+        "Operation System",
+        "Database Management System",
+        "Data Structure",
+        "Computer Oriented Numerical & statistical Methods",
+        "Accounts & Management Control"
+    ],
+    "semester3": [
+        "Computer Oriented Optimization techniques",
+        "Software Engineering Methodologies",
+        "Object Oriented Methodology & C++",
+        "Theory of Computation",
+        "Computer Networks"
+    ],
+    "semester4": [
+        "Artificial Intelligence & Applications",
+        "INFORMATION STORAGE AND MANAGEMENT",
+        "Computer Graphics & Multimedia",
+        "Design and Analysis of Algorithms",
+        "Elective-I : E1(A) Java Programming & Technologies",
+        "Elective-I : E1(B) Compiler Design",
+        "Elective-I : E1(C) Managerial Economics",
+        "Elective-I : E1(D) Advanced DataBase Management System",
+        "Elective-I : E1(E) Microprocessor and Interfaces"
+    ]
+}
