@@ -1,87 +1,11 @@
-// let navBook = document.getElementById("navbook");
-// navBook.addEventListener('click', bookPage);
+//ASYNC AWAIT
 
-// function bookPage() {
-//     const xml = new XMLHttpRequest();
-//     xml.open('GET', 'html/book.html', true);
-//     xml.onload = function () {
-//         if (this.status == 200) {
-//             document.body.innerHTML = this.response;
-//         }
-//         else {
-//             console.log('bad request 404');
-//         }
-//     }
-//     xml.send();
+// async function mcaBooks(semester) {
+//     let response = await fetch('../json//bookmca.json');
+//     let data = await response.json();
+//     console.log(data);
+//     // console.log(data[semester]);
 // }
-
-// let navSyllabus = document.getElementById("navsyllabus");
-// navSyllabus.addEventListener('click', syllabusPage);
-
-// function syllabusPage() {
-//     const xml = new XMLHttpRequest();
-//     xml.open('GET', 'sullabus.html', true);
-//     xml.onload = function () {
-//         if (this.status == 200) {
-//             document.body.innerHTML = this.response;
-//         }
-//         else {
-//             console.log('bad request 404');
-//         }
-//     }
-//     xml.send();
-// }
-
-// let navNotes = document.getElementById("navnotes");
-// navNotes.addEventListener('click', notesPage);
-
-// function notesPage() {
-//     const xml = new XMLHttpRequest();
-//     xml.open('GET', 'notes.html', true);
-//     xml.onload = function () {
-//         if (this.status == 200) {
-//             document.body.innerHTML = this.response;
-//         }
-//         else {
-//             console.log('bad request 404');
-//         }
-//     }
-//     xml.send();
-// }
-
-// let navPapers = document.getElementById("navpapers");
-// navPapers.addEventListener('click', paperPage);
-
-// function paperPage() {
-//     const xml = new XMLHttpRequest();
-//     xml.open('GET', 'examPaper.html', true);
-//     xml.onload = function () {
-//         if (this.status == 200) {
-//             document.body.innerHTML = this.response;
-//         }
-//         else {
-//             console.log('bad request 404');
-//         }
-//     }
-//     xml.send();
-// }
-
-//
-function mcaBooks(sem) {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', '../json//bookmca.json', true);
-    xhr.onload = function () {
-        let data = JSON.parse(this.response);
-        // let getNames=`<h2 style="color: black;">BOOKS</h2>
-        //         <div class="scroll">
-        //         <ul>`;
-        // for (const key in data.sem) {
-
-        // }  
-        console.log(data.sem);
-    }
-    xhr.send();
-}
 
 //MCA book button//
 
@@ -89,7 +13,6 @@ let mcaBtn = document.getElementById("mcaBtn");
 mcaBtn.addEventListener('click', showMcabook);
 
 function showMcabook() {
-    console.log("clicked");
     const xhr = new XMLHttpRequest();
     xhr.open('GET', '../json/bookmca.json', true);
     xhr.onprogress = function () {
@@ -110,10 +33,10 @@ function showMcabook() {
             <div class="scroll">
             <ul>
                 <li><b><a id="semester1" onclick="mcaBooks(this.id)">Semester 1</a></b></li>
-                <li><b><a id="semester2">Semester 2</a></b></li>
-                <li><b><a id="semester3">Semester 3</a></b></li>
-                <li><b><a id="semester4">Semester 4</a></b></li>
-                <li><b><a id="semester5">Semester 5</a></b></li>
+                <li><b><a id="semester2" onclick="mcaBooks(this.id)">Semester 2</a></b></li>
+                <li><b><a id="semester3" onclick="mcaBooks(this.id)">Semester 3</a></b></li>
+                <li><b><a id="semester4" onclick="mcaBooks(this.id)">Semester 4</a></b></li>
+                <li><b><a id="semester5" onclick="mcaBooks(this.id)">Semester 5</a></b></li>
             </ul>
             </div>
         </div>
@@ -123,83 +46,35 @@ function showMcabook() {
         <ul>`;
             let data = JSON.parse(this.response);
             // console.log(data.semester[2]);
-            for (const key in data.semester1) {
-                html += `<li><b><a href="">${data.semester1[key]}</a></b></li>`;
+            for (const key in data.mca.semester1) {
+                html += `<li><b><a href="">${data.mca.semester1[key]}</a></b></li>`;
             }
             html += `</ul>
             </div>
             </div>`;
             document.getElementById("list").innerHTML = html;
-
-            // let mcaS2 = document.getElementById("mcaS2");
-            // mcaS2.addEventListener('click', function (e) {
-            //     e.preventDefault();
-            //     console.log("hey");
-            //     let booklist = `<h2 style="color: black;">BOOKS</h2>
-            //     <div class="scroll">
-            //     <ul>`;
-            //     for (const key in data.semester2) {
-            //         booklist += `<li><b><a href="">${data.semester2[key]}</a></b></li>`;
-            //     }
-            //     booklist += `</ul></div>`;
-            //     document.getElementById("BooksId").innerHTML = booklist;
-            // })
-
-            // let mcaS3 = document.getElementById("mcaS3");
-            // mcaS3.addEventListener('click', function (e) {
-            //     e.preventDefault();
-            //     let booklist = `<h2 style="color: black;">BOOKS</h2>
-            //     <div class="scroll">
-            //     <ul>`;
-            //     for (const key in data.semester3) {
-            //         booklist += `<li><b><a href="">${data.semester3[key]}</a></b></li>`;
-            //     }
-            //     booklist += `</ul></div>`;
-            //     document.getElementById("BooksId").innerHTML = booklist;
-            // })
-
-            // let mcaS4 = document.getElementById("mcaS4");
-            // mcaS4.addEventListener('click', function (e) {
-            //     e.preventDefault();
-            //     let booklist = `<h2 style="color: black;">BOOKS</h2>
-            //     <div class="scroll">
-            //     <ul>`;
-            //     for (const key in data.semester4) {
-            //         booklist += `<li><b><a href="">${data.semester4[key]}</a></b></li>`;
-            //     }
-            //     booklist += `</ul></div>`;
-            //     document.getElementById("BooksId").innerHTML = booklist;
-            // })
-
-            // let mcaS5 = document.getElementById("mcaS5");
-            // mcaS5.addEventListener('click', function (e) {
-            //     e.preventDefault();
-            //     let booklist = `<h2 style="color: black;">BOOKS</h2>
-            //     <div class="scroll">
-            //     <ul>`;
-            //     for (const key in data.semester5) {
-            //         booklist += `<li><b><a href="">${data.semester5[key]}</a></b></li>`;
-            //     }
-            //     booklist += `</ul></div>`;
-            //     document.getElementById("BooksId").innerHTML = booklist;
-            // })
-            // let mcaS1 = document.getElementById("mcaS1");
-            // mcaS1.addEventListener('click', function (e) {
-            //     e.preventDefault();
-            //     let booklist = `<h2 style="color: black;">BOOKS</h2>
-            //     <div class="scroll">
-            //     <ul>`;
-            //     for (const key in data.semester1) {
-            //         booklist += `<li><b><a href="">${data.semester1[key]}</a></b></li>`;
-            //     }
-            //     booklist += `</ul></div>`;
-            //     document.getElementById("BooksId").innerHTML = booklist;
-
-            // })
         }
         else {
             console.log("error occured");
         }
+    }
+    xhr.send();
+}
+
+function mcaBooks(semester) { // <--- better name
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '../json//bookmca.json', true);
+    xhr.onload = function () { // <--- remove the parameter
+        let data = JSON.parse(this.response);
+        //console.log(data[semester]); // <--- dynamic property reference
+        let bookList = `<h2 style="color: black;">BOOKS</h2>
+                <div class="scroll">
+                <ul>`;
+        for (const key in data.mca[semester]) {
+            bookList += `<li><b><a href="">${data.mca[semester][key]}</a></b></li>`;
+        }
+        bookList += `</ul></div>`;
+        document.getElementById("BooksId").innerHTML = bookList;
     }
     xhr.send();
 }
@@ -212,7 +87,7 @@ ddmcaBtn.addEventListener('click', showddmcaBook);
 function showddmcaBook() {
     console.log("DDmca");
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', '../json/bookDdmca.json', true);
+    xhr.open('GET', '../json/bookmca.json', true);
 
     xhr.onprogress = function () {
         let loading = `<div class="loading-img">
@@ -227,14 +102,14 @@ function showddmcaBook() {
             <h2>SEMESTER<sub>(DDMCA)</sub></h2>
             <div class="scroll">
             <ul>
-                <li><b><a id="ddmcaS1">Semester 1</a></b></li>
-                <li><b><a id="ddmcaS2">Semester 2</a></b></li>
-                <li><b><a id="ddmcaS3">Semester 3</a></b></li>
-                <li><b><a id="ddmcaS4">Semester 4</a></b></li>
-                <li><b><a id="ddmcaS5">Semester 5</a></b></li>
-                <li><b><a id="ddmcaS6">Semester 6</a></b></li>
-                <li><b><a id="ddmcaS7">Semester 7</a></b></li>
-                <li><b><a id="ddmcaS8">Semester 8</a></b></li>
+                <li><b><a id="semester1" onclick="ddmcaBooks(this.id)">Semester 1</a></b></li>
+                <li><b><a id="semester2" onclick="ddmcaBooks(this.id)">Semester 2</a></b></li>
+                <li><b><a id="semester3" onclick="ddmcaBooks(this.id)">Semester 3</a></b></li>
+                <li><b><a id="semester4" onclick="ddmcaBooks(this.id)">Semester 4</a></b></li>
+                <li><b><a id="semester5" onclick="ddmcaBooks(this.id)">Semester 5</a></b></li>
+                <li><b><a id="semester6" onclick="ddmcaBooks(this.id)">Semester 6</a></b></li>
+                <li><b><a id="semester7" onclick="ddmcaBooks(this.id)">Semester 7</a></b></li>
+                <li><b><a id="semester8" onclick="ddmcaBooks(this.id)">Semester 8</a></b></li>
             </ul>
             </div>
         </div>
@@ -243,124 +118,36 @@ function showddmcaBook() {
         <div class="scroll">
         <ul>`;
             let data = JSON.parse(this.response);
-            for (const key in data.semester1) {
-                html += `<li><b><a href="">${data.semester1[key]}</a></b></li>`
+            for (const key in data.ddmca.semester1) {
+                html += `<li><b><a href="">${data.ddmca.semester1[key]}</a></b></li>`
             }
             html += `</ul>
             </div>
             </div>`;
             document.getElementById("list").innerHTML = html;
-
-            let ddmcaS2 = document.getElementById("ddmcaS2");
-            ddmcaS2.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-                <div class="scroll">
-                <ul>`;
-                for (const key in data.semester2) {
-                    booklist += `<li><b><a href="">${data.semester2[key]}</a></b></li>`;
-                }
-                booklist += `</ul>
-                </div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
-            let ddmcaS3 = document.getElementById("ddmcaS3");
-            ddmcaS3.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-                <div class="scroll">
-                <ul>`;
-                for (const key in data.semester3) {
-                    booklist += `<li><b><a href="">${data.semester3[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
-            let ddmcaS4 = document.getElementById("ddmcaS4");
-            ddmcaS4.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-                <div class="scroll">
-                <ul>`;
-                for (const key in data.semester4) {
-                    booklist += `<li><b><a href="">${data.semester4[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
-            let ddmcaS5 = document.getElementById("ddmcaS5");
-            ddmcaS5.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-                <div class="scroll">
-                <ul>`;
-                for (const key in data.semester5) {
-                    booklist += `<li><b><a href="">${data.semester5[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
-            let ddmcaS6 = document.getElementById("ddmcaS6");
-            ddmcaS6.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-                <div class="scroll">
-                <ul>`;
-                for (const key in data.semester6) {
-                    booklist += `<li><b><a href="">${data.semester6[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
-            let ddmcaS7 = document.getElementById("ddmcaS7");
-            ddmcaS7.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-                <div class="scroll">
-                <ul>`;
-                for (const key in data.semester7) {
-                    booklist += `<li><b><a href="">${data.semester7[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
-            let ddmcaS8 = document.getElementById("ddmcaS8");
-            ddmcaS8.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-                <div class="scroll">
-                <ul>`;
-                for (const key in data.semester8) {
-                    booklist += `<li><b><a href="">${data.semester8[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
-            let ddmcaS1 = document.getElementById("ddmcaS1");
-            ddmcaS1.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-                <div class="scroll">
-                <ul>`;
-                for (const key in data.semester1) {
-                    booklist += `<li><b><a href="">${data.semester1[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
         }
         else {
             console.log("error occured");
         }
     }
 
+    xhr.send();
+}
+
+function ddmcaBooks(semester) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '../json//bookmca.json', true);
+    xhr.onload = function () {
+        let data = JSON.parse(this.response);
+        let bookList = `<h2 style="color: black;">BOOKS</h2>
+        <div class="scroll">
+        <ul>`;
+        for (const key in data.ddmca[semester]) {
+            bookList += `<li><b><a href="">${data.ddmca[semester][key]}</a></b></li>`;
+        }
+        bookList += `</ul></div>`;
+        document.getElementById("BooksId").innerHTML = bookList;
+    }
     xhr.send();
 }
 
@@ -371,7 +158,7 @@ bcaBtn.addEventListener('click', showbcaBook);
 
 function showbcaBook() {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', '../json/bookBca.json', true);
+    xhr.open('GET', '../json/bookmca.json', true);
     xhr.onprogress = function () {
         let loading = `<div class="loading-img">
         <img src="../logo-images/Spinner-2.gif" alt="">
@@ -384,12 +171,12 @@ function showbcaBook() {
             <h2>SEMESTER<sub>(BCA)</sub></h2>
             <div class="scroll">
             <ul>
-                <li><b><a id="bcaS1">Semester 1</a></b></li>
-                <li><b><a id="bcaS2">Semester 2</a></b></li>
-                <li><b><a id="bcaS3">Semester 3</a></b></li>
-                <li><b><a id="bcaS4">Semester 4</a></b></li>
-                <li><b><a id="bcaS5">Semester 5</a></b></li>
-                <li><b><a id="bcaS6">Semester 6</a></b></li>
+                <li><b><a id="semester1" onclick="bcaBooks(this.id)">Semester 1</a></b></li>
+                <li><b><a id="semester2" onclick="bcaBooks(this.id)">Semester 2</a></b></li>
+                <li><b><a id="semester3" onclick="bcaBooks(this.id)">Semester 3</a></b></li>
+                <li><b><a id="semester4" onclick="bcaBooks(this.id)">Semester 4</a></b></li>
+                <li><b><a id="semester5" onclick="bcaBooks(this.id)">Semester 5</a></b></li>
+                <li><b><a id="semester6" onclick="bcaBooks(this.id)">Semester 6</a></b></li>
             </ul>
             </div>
         </div>
@@ -398,91 +185,12 @@ function showbcaBook() {
         <div class="scroll">
         <ul>`;
             let data = JSON.parse(this.response);
-            for (const key in data.semester1) {
-                html += `<li><b><a href="">${data.semester1[key]}</a></b></li>`
+            for (const key in data.bca.semester1) {
+                html += `<li><b><a href="">${data.bca.semester1[key]}</a></b></li>`
             }
             html += `<ul></div>
         </div>`;
             document.getElementById("list").innerHTML = html;
-
-            let bcaS1 = document.getElementById("bcaS1");
-            bcaS1.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-            <div class="scroll">
-            <ul>`;
-                for (const key in data.semester1) {
-                    booklist += `<li><b><a href="">${data.semester1[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
-            let bcaS2 = document.getElementById("bcaS2");
-            bcaS2.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-            <div class="scroll">
-            <ul>`;
-                for (const key in data.semester2) {
-                    booklist += `<li><b><a href="">${data.semester2[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
-            let bcaS3 = document.getElementById("bcaS3");
-            bcaS3.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-            <div class="scroll">
-            <ul>`;
-                for (const key in data.semester3) {
-                    booklist += `<li><b><a href="">${data.semester3[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
-            let bcaS4 = document.getElementById("bcaS4");
-            bcaS4.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-            <div class="scroll">
-            <ul>`;
-                for (const key in data.semester4) {
-                    booklist += `<li><b><a href="">${data.semester4[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
-            let bcaS5 = document.getElementById("bcaS5");
-            bcaS5.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-            <div class="scroll">
-            <ul>`;
-                for (const key in data.semester5) {
-                    booklist += `<li><b><a href="">${data.semester5[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
-            let bcaS6 = document.getElementById("bcaS6");
-            bcaS6.addEventListener('click', function (e) {
-                e.preventDefault();
-                let booklist = `<h2 style="color: black;">BOOKS</h2>
-            <div class="scroll">
-            <ul>`;
-                for (const key in data.semester6) {
-                    booklist += `<li><b><a href="">${data.semester6[key]}</a></b></li>`;
-                }
-                booklist += `</ul></div>`;
-                document.getElementById("BooksId").innerHTML = booklist;
-            })
-
 
         }
         else {
@@ -491,6 +199,24 @@ function showbcaBook() {
     }
     xhr.send();
 }
+
+function bcaBooks(semester) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '../json//bookmca.json', true);
+    xhr.onload = function () {
+        let data = JSON.parse(this.response);
+        let bookList = `<h2 style="color: black;">BOOKS</h2>
+        <div class="scroll">
+        <ul>`;
+        for (const key in data.bca[semester]) {
+            bookList += `<li><b><a href="">${data.bca[semester][key]}</a></b></li>`;
+        }
+        bookList += `</ul></div>`;
+        document.getElementById("BooksId").innerHTML = bookList;
+    }
+    xhr.send();
+}
+
 
 //FEEDBACK form 
 

@@ -28,8 +28,38 @@
         <a href="#footer">Feedback</a>
     </b>
 </div>
-<img src="../logo-images/syllabus.svg" alt="">
+<div class="con-card">
+    <div class="card" data-aos="fade-up">
+        <div class="img">
+            <img src="../logo-images/p1.jpg" alt="">
+        </div>
+        <div class="content">
+            <p>All BCA course book is here!</p>
+            <button id="mca" onclick="showmcaSyllabus(this.id)" class="btnbook">Click here</button>
+        </div>
+    </div>
+    <div class="card" data-aos="fade-down">
+        <div class="img">
+            <img src="../logo-images/p2.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>heelo</h3>
+            <button id="ddmca" onclick="showmcaSyllabus(this.id)" class="btnbook">Click here</button>
+        </div>
+    </div>
+    <div class="card" data-aos="fade-up">
+        <div class="img">
+            <img src="../logo-images/p3.jpg" alt="">
+        </div>
+        <div class="content">
+            <p>click here to Downlaod syllabus</p>
+            <button id="bca" onclick="showmcaSyllabus(this.id)" class="btnbook">Click here</button>
+        </div>
+    </div>
+</div>
+<div class="list" id="list">
 
+</div>
 <div class="footer">
     <p class="footer-heading"><b>Facing any problem</b></p>
     <h3>We are here to solve your problems. If you want to contribute content , we are happy to
@@ -63,7 +93,8 @@
         </div>
     </div>
 </div>
-<script src="../js/book.js"></script>
+<script src="../js/syllabus.js"></script>
+<!-- <script src="../js/book.js"></script> -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
 </script>
 <script type="text/javascript">

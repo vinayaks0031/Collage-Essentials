@@ -4,12 +4,8 @@
 <head>
   <link rel="stylesheet" href="/css/index.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
-      rel="stylesheet"
-    /> -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet" />
   <meta charset="UTF-8" />
@@ -36,7 +32,7 @@
     </b>
     <i class="fas fa-bars"></i>
   </div>
-  <div class="text">
+  <div class="text" data-aos="fade-down">
     <img src="logo-images/coding.svg">
     <p class="info">
       College Essentials is a platform where you will find all the things related to your studies like Notes, Books,
@@ -83,7 +79,7 @@
     </div>
   </div>
   <br><br>
-  <div class="slide">
+  <div class="slide" data-aos="fade-down">
     <div class="trans">
       <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
       <div class="slider">
@@ -131,6 +127,10 @@
     </div>
   </div>
   <script src="/js/app.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
   </script>
   <script type="text/javascript">

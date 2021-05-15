@@ -1,49 +1,174 @@
 {
-    "semester1": [
-        "Information technology",
-        "Methamatical foundation of CS",
-        "Programming and problem solving in c",
-        "computer organization abs assembly language programming",
-        "Communication skills"
-    ],
-    "semester2": [
-        "Operation System",
-        "Database Management System",
-        "Data Structure",
-        "Computer Oriented Numerical & statistical Methods",
-        "Accounts & Management Control"
-    ],
-    "semester3": [
-        "Computer Oriented Optimization techniques",
-        "Software Engineering Methodologies",
-        "Object Oriented Methodology & C++",
-        "Theory of Computation",
-        "Computer Networks"
-    ],
-    "semester4": [
-        "Artificial Intelligence & Applications",
-        "INFORMATION STORAGE AND MANAGEMENT",
-        "Computer Graphics & Multimedia",
-        "Design and Analysis of Algorithms",
-        "Elective-I : E1(A) Java Programming & Technologies",
-        "Elective-I : E1(B) Compiler Design",
-        "Elective-I : E1(C) Managerial Economics",
-        "Elective-I : E1(D) Advanced DataBase Management System",
-        "Elective-I : E1(E) Microprocessor and Interfaces"
-    ],
-    "semester5": [
-        "Data Warehousing and Mining",
-        "UNIX & Shell Programming",
-        "Cloud Computing",
-        "Elective-II : E-II(a) : Modeling & Simulation",
-        "Elective – II: EII(b) Organizational Behaviour",
-        "Elective II : EII(c) : Soft Computing",
-        "Elective II : E-II(d) : Network Programming",
-        "Elective II : EII(e) : .Net Technology",
-        "Elective-III : EIII (a) Distributed Systems",
-        "Elective- III : EIII(b ) Computer Vision and Digital Image Processing",
-        "Elective- III : EIII(c ) Bioinformatics",
-        "Elective III : EIII(d) : Embedded Systems",
-        "Elective-III : EIII (e) Network Security"
-    ]
+    "mca": {
+        "semester1": [
+            "Information technology",
+            "Methamatical foundation of CS",
+            "Programming and problem solving in c",
+            "computer organization abs assembly language programming",
+            "Communication skills"
+        ],
+        "semester2": [
+            "Operation System",
+            "Database Management System",
+            "Data Structure",
+            "Computer Oriented Numerical & statistical Methods",
+            "Accounts & Management Control"
+        ],
+        "semester3": [
+            "Computer Oriented Optimization techniques",
+            "Software Engineering Methodologies",
+            "Object Oriented Methodology & C++",
+            "Theory of Computation",
+            "Computer Networks"
+        ],
+        "semester4": [
+            "Artificial Intelligence & Applications",
+            "INFORMATION STORAGE AND MANAGEMENT",
+            "Computer Graphics & Multimedia",
+            "Design and Analysis of Algorithms",
+            "Elective-I : E1(A) Java Programming & Technologies",
+            "Elective-I : E1(B) Compiler Design",
+            "Elective-I : E1(C) Managerial Economics",
+            "Elective-I : E1(D) Advanced DataBase Management System",
+            "Elective-I : E1(E) Microprocessor and Interfaces"
+        ],
+        "semester5": [
+            "Data Warehousing and Mining",
+            "UNIX & Shell Programming",
+            "Cloud Computing",
+            "Elective-II : E-II(a) : Modeling & Simulation",
+            "Elective – II: EII(b) Organizational Behaviour",
+            "Elective II : EII(c) : Soft Computing",
+            "Elective II : E-II(d) : Network Programming",
+            "Elective II : EII(e) : .Net Technology",
+            "Elective-III : EIII (a) Distributed Systems",
+            "Elective- III : EIII(b ) Computer Vision and Digital Image Processing",
+            "Elective- III : EIII(c ) Bioinformatics",
+            "Elective III : EIII(d) : Embedded Systems",
+            "Elective-III : EIII (e) Network Security"
+        ],
+        "semLink1": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "ddmca": {
+        "semester1": [
+            "Fundamental of Computer Science & IT",
+            "Discrete Mathematics",
+            "Communication Skills in English",
+            "Programming and problem solving in C",
+            "Digital Electronics"
+        ],
+        "semester2": [
+            "Computer Architecture",
+            "Data Structure using C",
+            "Statistics ",
+            "Technical Communication & Personality Development",
+            "Principal of Managemen"
+        ],
+        "semester3": [
+            "System Software",
+            "Computer Oriented Numerical Methods",
+            "Web Designing in HTML",
+            "Aptitude Skills and Reasoning",
+            "DBMS "
+        ],
+        "semester4": [
+            "Operating System",
+            "Fundamental of Computer Networks ",
+            "System Analysis and Design",
+            "Accounting and Financial Management",
+            "Computer Oriented Optimization Techniques"
+        ],
+        "semester5": [
+            "Object Oriented Programming in C++",
+            "Principles of Programming Language",
+            "Advanced Web Designing",
+            "Computer Graphics ",
+            "Software Engineering"
+        ],
+        "semester6": [
+            "Analysis Design of Algorithm",
+            "Advanced Computer Networks",
+            "Advanced DBMS",
+            "Theory of Computation",
+            "Artificial Intelligence"
+        ],
+        "semester7": [
+            "Cloud Computing",
+            "Data Science in Mining",
+            "File Structures ",
+            "Programming in Java -1 ",
+            "Compiler Design ",
+            "Web Technlogies ",
+            "Unix and Shell Programming ",
+            "Data Analytics",
+            "Computer Ethics"
+        ],
+        "semester8": [
+            "Soft Computing",
+            "Distributed Systems",
+            "Network Security",
+            "JAVA-II",
+            "MULTIMEDIA",
+            "Digital Image Processing",
+            " Mobile Computing",
+            "Parallel Computing",
+            "SOFTWARE ARCHITECTURE"
+        ]
+    },
+    "bca": {
+        "semester1": [
+            "Mathematics -I",
+            "Statistics -I",
+            "Physics -I",
+            "Programming & Problem solving through C -I",
+            "PC Software",
+            "English"
+        ],
+        "semester2": [
+            "Mathematics -II",
+            "Statistics -II",
+            "Physics -II",
+            "Programming & Problem solving through C -II",
+            "Introduction to Information System",
+            "Hindi"
+        ],
+        "semester3": [
+            "Mathematics -III",
+            "Object Oriented Programming Through C++",
+            "Digital Computer Electronics",
+            "Accounting & Financial Mgt",
+            "Data Structure using C++",
+            "Communicational Skills"
+        ],
+        "semester4": [
+            "Coordinate Geometry of Three Dimension",
+            "Database Management System",
+            "Data & Network Communication",
+            "Digital Computer Organization",
+            "Unix Operating System ",
+            "Environmental Awareness"
+        ],
+        "semester5": [
+            "Introduction to JAVA",
+            "Computer Organization and Architecture",
+            "Software Eng",
+            "Discrete Mathematics & Linear algebra",
+            "Web Designing & web Technology",
+            "Entrepreneurship"
+        ],
+        "semester6": [
+            "Computer Graphics & Multimedia",
+            "Computer Oriented Numerical Methods",
+            "Microprocessor & assembly language Programming ",
+            "Principles and Practices of Management",
+            "Computer Graphics Practical"
+        ]
+    }
 }
