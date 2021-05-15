@@ -80,6 +80,7 @@ h1{
 .con-card .card:hover{
 height: 420px;
 color: black;
+background-color: white;
 }
 
 .con-card .card .img{
@@ -134,6 +135,11 @@ color: black;
   padding: auto;
 }
 
+.list .loading-img{
+  margin: auto;
+
+}
+
 .semester{
   width: 45%; 
   text-align: center;
@@ -142,6 +148,7 @@ color: black;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
   height: 60vh;
 }
+
 
 
 .semester .scroll{
