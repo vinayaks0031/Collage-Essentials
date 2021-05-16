@@ -64,6 +64,12 @@ function showMcabook() {
 function mcaBooks(semester) { // <--- better name
     const xhr = new XMLHttpRequest();
     xhr.open('GET', '../json//bookmca.json', true);
+    xhr.onprogress = function () {
+        let loading = `<div class="loading-img">
+        <img src="../logo-images/Spinner-2.gif" alt="">
+    </div>`;
+        document.getElementById("BooksId").innerHTML = loading;
+    }
     xhr.onload = function () { // <--- remove the parameter
         let data = JSON.parse(this.response);
         //console.log(data[semester]); // <--- dynamic property reference
@@ -119,7 +125,7 @@ function showddmcaBook() {
         <ul>`;
             let data = JSON.parse(this.response);
             for (const key in data.ddmca.semester1) {
-                html += `<li><b><a href="">${data.ddmca.semester1[key]}</a></b></li>`
+                html += `<li><b><a href="${data.ddmcalink.semester1[key]}" target="_blank">${data.ddmca.semester1[key]}</a></b></li>`
             }
             html += `</ul>
             </div>
@@ -137,13 +143,19 @@ function showddmcaBook() {
 function ddmcaBooks(semester) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', '../json//bookmca.json', true);
+    xhr.onprogress = function () {
+        let loading = `<div class="loading-img">
+        <img src="../logo-images/Spinner-2.gif" alt="">
+    </div>`;
+        document.getElementById("BooksId").innerHTML = loading;
+    }
     xhr.onload = function () {
         let data = JSON.parse(this.response);
         let bookList = `<h2 style="color: black;">BOOKS</h2>
         <div class="scroll">
         <ul>`;
         for (const key in data.ddmca[semester]) {
-            bookList += `<li><b><a href="">${data.ddmca[semester][key]}</a></b></li>`;
+            bookList += `<li><b><a href="${data.ddmcalink[semester][key]}" target="_blank">${data.ddmca[semester][key]}</a></b></li>`;
         }
         bookList += `</ul></div>`;
         document.getElementById("BooksId").innerHTML = bookList;
@@ -203,6 +215,12 @@ function showbcaBook() {
 function bcaBooks(semester) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', '../json//bookmca.json', true);
+    xhr.onprogress = function () {
+        let loading = `<div class="loading-img">
+        <img src="../logo-images/Spinner-2.gif" alt="">
+    </div>`;
+        document.getElementById("BooksId").innerHTML = loading;
+    }
     xhr.onload = function () {
         let data = JSON.parse(this.response);
         let bookList = `<h2 style="color: black;">BOOKS</h2>
