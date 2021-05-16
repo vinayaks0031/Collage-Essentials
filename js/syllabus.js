@@ -9,7 +9,7 @@ function showmcaSyllabus(syllabus) {
     }
     xhr.onload = function () {
         if (this.status == 200) {
-            let html = `<div class="semester semester-syl">
+            let html = `<div class="semester semester-syl" data-aos="fade-down">
             <h2 style="color:black;">SEMESTER<sub>(${syllabus})</sub></h2>
             <div class="scroll">
             <ul>`;

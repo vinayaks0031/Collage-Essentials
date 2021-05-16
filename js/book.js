@@ -28,7 +28,7 @@ function showMcabook() {
     }
     xhr.onload = function () {
         if (this.status == 200) {
-            let html = `<div class="semester">
+            let html = `<div class="semester" data-aos="fade-up">
             <h2>SEMESTER<sub>(MCA)</sub></h2>
             <div class="scroll">
             <ul>
@@ -40,7 +40,7 @@ function showMcabook() {
             </ul>
             </div>
         </div>
-        <div id="BooksId" class="semester">
+        <div id="BooksId" class="semester" data-aos="fade-down">
         <h2 style="color: black;">BOOKS</h2>
         <div class="scroll">
         <ul>`;
@@ -98,7 +98,7 @@ function showddmcaBook() {
 
     xhr.onload = function () {
         if (this.status == 200) {
-            let html = `<div class="semester">
+            let html = `<div class="semester" data-aos="fade-up">
             <h2>SEMESTER<sub>(DDMCA)</sub></h2>
             <div class="scroll">
             <ul>
@@ -113,7 +113,7 @@ function showddmcaBook() {
             </ul>
             </div>
         </div>
-        <div id="BooksId" class="semester">
+        <div id="BooksId" class="semester" data-aos="fade-down">
         <h2 style="color: black;">BOOKS</h2>
         <div class="scroll">
         <ul>`;
@@ -167,7 +167,7 @@ function showbcaBook() {
     }
     xhr.onload = function () {
         if (this.status == 200) {
-            let html = `<div class="semester">
+            let html = `<div class="semester" data-aos="fade-up">
             <h2>SEMESTER<sub>(BCA)</sub></h2>
             <div class="scroll">
             <ul>
@@ -180,7 +180,7 @@ function showbcaBook() {
             </ul>
             </div>
         </div>
-        <div id="BooksId" class="semester">
+        <div id="BooksId" class="semester" data-aos="fade-down">
         <h2 style="color: black;">BOOKS</h2>
         <div class="scroll">
         <ul>`;

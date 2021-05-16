@@ -128,6 +128,9 @@ background-color: white;
   padding: 10px 15px 10px 15px;
 }
 
+.content p > b{
+  color: #1e6fbb;
+}
 
 .list{
   height: 80vh;
@@ -205,6 +208,7 @@ background-color: white;
 
 li:hover{
   background-color:#3c75df;
+  transition: 0.2s ease;
 }
 
 li b >a{
