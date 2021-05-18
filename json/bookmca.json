@@ -26,26 +26,75 @@
             "INFORMATION STORAGE AND MANAGEMENT",
             "Computer Graphics & Multimedia",
             "Design and Analysis of Algorithms",
-            "Elective-I : E1(A) Java Programming & Technologies",
-            "Elective-I : E1(B) Compiler Design",
-            "Elective-I : E1(C) Managerial Economics",
-            "Elective-I : E1(D) Advanced DataBase Management System",
-            "Elective-I : E1(E) Microprocessor and Interfaces"
+            "Java Programming & Technologies",
+            "Compiler Design",
+            "Managerial Economics",
+            "Advance DBMS",
+            "Microprocessor and Interfaces"
         ],
         "semester5": [
             "Data Warehousing and Mining",
             "UNIX & Shell Programming",
             "Cloud Computing",
-            "Elective-II : E-II(a) : Modeling & Simulation",
-            "Elective – II: EII(b) Organizational Behaviour",
-            "Elective II : EII(c) : Soft Computing",
-            "Elective II : E-II(d) : Network Programming",
-            "Elective II : EII(e) : .Net Technology",
-            "Elective-III : EIII (a) Distributed Systems",
-            "Elective- III : EIII(b ) Computer Vision and Digital Image Processing",
-            "Elective- III : EIII(c ) Bioinformatics",
-            "Elective III : EIII(d) : Embedded Systems",
-            "Elective-III : EIII (e) Network Security"
+            "Modeling & Simulation",
+            "Organizational Behaviour",
+            "Soft Computing",
+            "Network Programming",
+            ".Net Technology",
+            "Distributed Systems",
+            "Computer Vision and Digital Image Processing",
+            "Bioinformatics",
+            "Embedded Systems",
+            "Network Security"
+        ]
+    },
+    "mcalink": {
+        "semester1": [
+            "Information technology",
+            "Methamatical foundation of CS",
+            "https://drive.google.com/file/d/1bb7e870PcgYKwtdWpqvVrq5LaBPQzz6e/view?usp=sharing",
+            "computer organization abs assembly language programming",
+            "https://drive.google.com/file/d/1FxYdM2owGv7dy1nB0z1_1Wwjev5z35uA/view?usp=sharing"
+        ],
+        "semester2": [
+            "https://drive.google.com/file/d/1fdKLWJGzGrBzcoWDvOVSV2uXk21s-S09/view?usp=sharing",
+            "https://drive.google.com/file/d/1KsxgiPq0eY5P0ZVviA0j_uppSxgMjyC_/view?usp=sharing",
+            "Data Structure",
+            "Computer Oriented Numerical & statistical Methods",
+            "Accounts & Management Control"
+        ],
+        "semester3": [
+            "Computer Oriented Optimization techniques",
+            "Software Engineering Methodologies",
+            "Object Oriented Methodology & C++",
+            "https://drive.google.com/file/d/1C-d15RMi6U108kK54zeA0ErrR2E8bQeI/view?usp=sharing",
+            "Computer Networks"
+        ],
+        "semester4": [
+            "Artificial Intelligence & Applications",
+            "INFORMATION STORAGE AND MANAGEMENT",
+            "Computer Graphics & Multimedia",
+            "Design and Analysis of Algorithms",
+            "Java Programming & Technologies",
+            "https://drive.google.com/file/d/1ozVczJMWeb21_ZmMp_Ini3extrECcw7S/view?usp=sharing",
+            "Managerial Economics",
+            "https://drive.google.com/file/d/1uGQH_wqF8b_oUpLNdhlYG3S-omNoQxbW/view?usp=sharing",
+            "Microprocessor and Interfaces"
+        ],
+        "semester5": [
+            "https://drive.google.com/file/d/1e4AOMcNCMlsyqxo4KsxbY98IkyxGBjRg/view?usp=sharing ",
+            "https://drive.google.com/file/d/1OE6LYB5vcmSp0fSOqfWnqLootXsoGan2/view?usp=sharing",
+            "https://drive.google.com/file/d/1gnvmxD5aHZ_mQSUGdSbdwUCEAatDuDqz/view?usp=sharing",
+            "Modeling & Simulation",
+            "Organizational Behaviour",
+            "https://drive.google.com/file/d/1jG-m8LT5LH2QhOHwrIrk_zbSrabdvPDE/view?usp=sharing",
+            "Network Programming",
+            ".Net Technology",
+            "https://drive.google.com/file/d/1MrivlXJE4Dvez2CdjaP-BBBW-JQhV4cU/view?usp=sharing",
+            "Computer Vision and Digital Image Processing",
+            "Bioinformatics",
+            "Embedded Systems",
+            "Network Security"
         ]
     },
     "ddmcalink": {
@@ -225,8 +274,7 @@
             "Computer Graphics & Multimedia",
             "Computer Oriented Numerical Methods",
             "Microprocessor & assembly language Programming ",
-            "Principles and Practices of Management",
-            "Computer Graphics Practical"
+            "Principles and Practices of Management"
         ]
     }
 }

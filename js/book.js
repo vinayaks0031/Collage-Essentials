@@ -9,45 +9,60 @@
 
 //MCA book button//
 
-let mcaBtn = document.getElementById("mcaBtn");
-mcaBtn.addEventListener('click', showMcabook);
-
-function showMcabook() {
+function showMcabook(course) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', '../json/bookmca.json', true);
     xhr.onprogress = function () {
         let loading = `<div class="loading-img">
         <img src="../logo-images/Spinner-2.gif" alt="">
-    </div>`;
+        </div>`;
         document.getElementById("list").innerHTML = loading;
     }
-    xhr.onreadystatechange = function () {
-
-
-        console.log(this.readyState)
-    }
     xhr.onload = function () {
+        console.log(course);
+        let data = JSON.parse(this.response);
         if (this.status == 200) {
             let html = `<div class="semester" data-aos="fade-up">
             <h2>SEMESTER<sub>(MCA)</sub></h2>
             <div class="scroll">
-            <ul>
-                <li><b><a id="semester1" onclick="mcaBooks(this.id)">Semester 1</a></b></li>
-                <li><b><a id="semester2" onclick="mcaBooks(this.id)">Semester 2</a></b></li>
-                <li><b><a id="semester3" onclick="mcaBooks(this.id)">Semester 3</a></b></li>
-                <li><b><a id="semester4" onclick="mcaBooks(this.id)">Semester 4</a></b></li>
-                <li><b><a id="semester5" onclick="mcaBooks(this.id)">Semester 5</a></b></li>
-            </ul>
+            <ul>`
+            let count = 0;
+            if (course == "mca") {
+                for (const key in data[course]) {
+                    html += `<li><b><a id="semester${++count}" onclick="mcaBooks(this.id)">Semester ${count}</a></b></li>`;
+                }
+            }
+            else if (course == "ddmca") {
+                for (const key in data[course]) {
+                    html += `<li><b><a id="semester${++count}" onclick="ddmcaBooks(this.id)">Semester ${count}</a></b></li>`;
+                }
+            }
+            else {
+                for (const key in data[course]) {
+                    html += `<li><b><a id="semester${++count}" onclick="bcaBooks(this.id)">Semester ${count}</a></b></li>`;
+                }
+            }
+            html += `</ul>
             </div>
         </div>
         <div id="BooksId" class="semester" data-aos="fade-down">
         <h2 style="color: black;">BOOKS</h2>
         <div class="scroll">
         <ul>`;
-            let data = JSON.parse(this.response);
-            // console.log(data.semester[2]);
-            for (const key in data.mca.semester1) {
-                html += `<li><b><a href="">${data.mca.semester1[key]}</a></b></li>`;
+            if (course == "mca") {
+                for (const key in data[course].semester1) {
+                    html += `<li><b><a href="${data.mcalink.semester1[key]}">${data[course].semester1[key]}</a></b></li>`;
+                }
+            }
+            else if (course == "ddmca") {
+                for (const key in data[course].semester1) {
+                    html += `<li><b><a href="${data.ddmcalink.semester1[key]}">${data[course].semester1[key]}</a></b></li>`;
+                }
+            }
+            else {
+                for (const key in data[course].semester1) {
+                    html += `<li><b><a href="">${data[course].semester1[key]}</a></b></li>`;
+                }
             }
             html += `</ul>
             </div>
@@ -77,66 +92,11 @@ function mcaBooks(semester) { // <--- better name
                 <div class="scroll">
                 <ul>`;
         for (const key in data.mca[semester]) {
-            bookList += `<li><b><a href="">${data.mca[semester][key]}</a></b></li>`;
+            bookList += `<li><b><a href="${data.mcalink[semester][key]}" target="_blank">${data.mca[semester][key]}</a></b></li>`;
         }
         bookList += `</ul></div>`;
         document.getElementById("BooksId").innerHTML = bookList;
     }
-    xhr.send();
-}
-
-//DDMCA book button
-
-let ddmcaBtn = document.getElementById("ddmcaBtn");
-ddmcaBtn.addEventListener('click', showddmcaBook);
-
-function showddmcaBook() {
-    console.log("DDmca");
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', '../json/bookmca.json', true);
-
-    xhr.onprogress = function () {
-        let loading = `<div class="loading-img">
-        <img src="../logo-images/Spinner-2.gif" alt="">
-    </div>`;
-        document.getElementById("list").innerHTML = loading;
-    }
-
-    xhr.onload = function () {
-        if (this.status == 200) {
-            let html = `<div class="semester" data-aos="fade-up">
-            <h2>SEMESTER<sub>(DDMCA)</sub></h2>
-            <div class="scroll">
-            <ul>
-                <li><b><a id="semester1" onclick="ddmcaBooks(this.id)">Semester 1</a></b></li>
-                <li><b><a id="semester2" onclick="ddmcaBooks(this.id)">Semester 2</a></b></li>
-                <li><b><a id="semester3" onclick="ddmcaBooks(this.id)">Semester 3</a></b></li>
-                <li><b><a id="semester4" onclick="ddmcaBooks(this.id)">Semester 4</a></b></li>
-                <li><b><a id="semester5" onclick="ddmcaBooks(this.id)">Semester 5</a></b></li>
-                <li><b><a id="semester6" onclick="ddmcaBooks(this.id)">Semester 6</a></b></li>
-                <li><b><a id="semester7" onclick="ddmcaBooks(this.id)">Semester 7</a></b></li>
-                <li><b><a id="semester8" onclick="ddmcaBooks(this.id)">Semester 8</a></b></li>
-            </ul>
-            </div>
-        </div>
-        <div id="BooksId" class="semester" data-aos="fade-down">
-        <h2 style="color: black;">BOOKS</h2>
-        <div class="scroll">
-        <ul>`;
-            let data = JSON.parse(this.response);
-            for (const key in data.ddmca.semester1) {
-                html += `<li><b><a href="${data.ddmcalink.semester1[key]}" target="_blank">${data.ddmca.semester1[key]}</a></b></li>`
-            }
-            html += `</ul>
-            </div>
-            </div>`;
-            document.getElementById("list").innerHTML = html;
-        }
-        else {
-            console.log("error occured");
-        }
-    }
-
     xhr.send();
 }
 
@@ -163,55 +123,6 @@ function ddmcaBooks(semester) {
     xhr.send();
 }
 
-//BCA Books section
-
-let bcaBtn = document.getElementById("bcaBtn");
-bcaBtn.addEventListener('click', showbcaBook);
-
-function showbcaBook() {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', '../json/bookmca.json', true);
-    xhr.onprogress = function () {
-        let loading = `<div class="loading-img">
-        <img src="../logo-images/Spinner-2.gif" alt="">
-    </div>`;
-        document.getElementById("list").innerHTML = loading;
-    }
-    xhr.onload = function () {
-        if (this.status == 200) {
-            let html = `<div class="semester" data-aos="fade-up">
-            <h2>SEMESTER<sub>(BCA)</sub></h2>
-            <div class="scroll">
-            <ul>
-                <li><b><a id="semester1" onclick="bcaBooks(this.id)">Semester 1</a></b></li>
-                <li><b><a id="semester2" onclick="bcaBooks(this.id)">Semester 2</a></b></li>
-                <li><b><a id="semester3" onclick="bcaBooks(this.id)">Semester 3</a></b></li>
-                <li><b><a id="semester4" onclick="bcaBooks(this.id)">Semester 4</a></b></li>
-                <li><b><a id="semester5" onclick="bcaBooks(this.id)">Semester 5</a></b></li>
-                <li><b><a id="semester6" onclick="bcaBooks(this.id)">Semester 6</a></b></li>
-            </ul>
-            </div>
-        </div>
-        <div id="BooksId" class="semester" data-aos="fade-down">
-        <h2 style="color: black;">BOOKS</h2>
-        <div class="scroll">
-        <ul>`;
-            let data = JSON.parse(this.response);
-            for (const key in data.bca.semester1) {
-                html += `<li><b><a href="">${data.bca.semester1[key]}</a></b></li>`
-            }
-            html += `<ul></div>
-        </div>`;
-            document.getElementById("list").innerHTML = html;
-
-        }
-        else {
-            console.log("error occured");
-        }
-    }
-    xhr.send();
-}
-
 function bcaBooks(semester) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', '../json//bookmca.json', true);
@@ -227,10 +138,202 @@ function bcaBooks(semester) {
         <div class="scroll">
         <ul>`;
         for (const key in data.bca[semester]) {
-            bookList += `<li><b><a href="">${data.bca[semester][key]}</a></b></li>`;
+            bookList += `<li><b><a href="" target="_blank">${data.bca[semester][key]}</a></b></li>`;
         }
         bookList += `</ul></div>`;
         document.getElementById("BooksId").innerHTML = bookList;
+    }
+    xhr.send();
+}
+
+
+//syllabus
+
+function showmcaSyllabus(syllabus) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '../json/syllabus.json', true);
+    xhr.onprogress = function () {
+        let loading = `<div class="loading-img">
+        <img src="../logo-images/Spinner-2.gif" alt="">
+    </div>`;
+        document.getElementById("list").innerHTML = loading;
+    }
+    xhr.onload = function () {
+        if (this.status == 200) {
+            let html = `<div class="semester semester-syl" data-aos="fade-up">
+            <h2 style="color:black;">SEMESTER<sub>(${syllabus})</sub></h2>
+            <div class="scroll">
+            <ul>`;
+            let data = JSON.parse(this.response);
+            let i = 0;
+            for (const key in data[syllabus]) {
+                html += `<li><b><a href="${data[syllabus][key]}" target="_blank">Semester ${++i}</a></b></li>`;
+            }
+            html += `</ul>
+            </div>
+        </div>`;
+            document.getElementById("list").innerHTML = html;
+        }
+        else {
+            console.log("error occured");
+        }
+    }
+    xhr.send();
+}
+
+//Notes 
+
+function showmcaNotes(course) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '../json/Notes.json', true);
+    xhr.onprogress = function () {
+        let loading = `<div class="loading-img">
+        <img src="../logo-images/Spinner-2.gif" alt="">
+    </div>`;
+        document.getElementById("list").innerHTML = loading;
+    }
+    xhr.onload = function () {
+        if (this.status == 200) {
+            let data = JSON.parse(this.response);
+            let html = `<div class="semester" data-aos="fade-up">
+            <h2>SEMESTER<sub>(${course})</sub></h2>
+            <div class="scroll">
+            <ul>`;
+            let count = 0;
+            if (course == "mca") {
+                for (const key in data[course]) {
+                    html += `<li><b><a id="semester${++count}" onclick="mcaNotes(this.id)">Semester ${count}</a></b></li>`;
+                }
+            }
+            else if (course == "ddmca") {
+                for (const key in data[course]) {
+                    html += `<li><b><a id="semester${++count}" onclick="ddmcaNotes(this.id)">Semester ${count}</a></b></li>`;
+                }
+            }
+            else {
+                for (const key in data[course]) {
+                    html += `<li><b><a id="semester${++count}" onclick="bcaNotes(this.id)">Semester ${count}</a></b></li>`;
+                }
+            }
+            html += `</ul>
+            </div>
+        </div>
+        <div id="BooksId" class="semester" data-aos="fade-down">
+        <h2 style="color: black;">NOTES</h2>
+        <div class="scroll">
+        <ul>`;
+            for (const key in data[course].semester1) {
+                html += `<li><b><a href="">${data[course].semester1[key]}</a></b></li>`;
+            }
+            html += `</ul></div></div>`;
+            document.getElementById("list").innerHTML = html;
+        }
+        else {
+            console.log("Error occured");
+        }
+    }
+    xhr.send();
+}
+
+function mcaNotes(semester) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '../json/Notes.json', true);
+    xhr.onprogress = function () {
+        let loading = `<div class="loading-img">
+        <img src="../logo-images/Spinner-2.gif" alt="">
+    </div>`;
+        document.getElementById("BooksId").innerHTML = loading;
+    }
+    xhr.onload = function () {
+        let data = JSON.parse(this.response);
+        let notesList = `<h2 style="color: black;">NOTES</h2>
+        <div class="scroll">
+        <ul>`;
+        for (const key in data.mca[semester]) {
+            notesList += `<li><b><a href="">${data.mca[semester][key]}</a></b></li>`
+        }
+        notesList += `</ul></div>`;
+        document.getElementById("BooksId").innerHTML = notesList;
+    }
+    xhr.send();
+}
+
+
+
+function ddmcaNotes(semester) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '../json/Notes.json', true);
+    xhr.onprogress = function () {
+        let loading = `<div class="loading-img">
+        <img src="../logo-images/Spinner-2.gif" alt="">
+    </div>`;
+        document.getElementById("BooksId").innerHTML = loading;
+    }
+    xhr.onload = function () {
+        let data = JSON.parse(this.response);
+        let notesList = `<h2 style="color: black;">NOTES</h2>
+        <div class="scroll">
+        <ul>`;
+        for (const key in data.ddmca[semester]) {
+            notesList += `<li><b><a href="">${data.ddmca[semester][key]}</a></b></li>`
+        }
+        notesList += `</ul></div>`;
+        document.getElementById("BooksId").innerHTML = notesList;
+    }
+    xhr.send();
+}
+
+
+function bcaNotes(semester) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '../json/Notes.json', true);
+    xhr.onprogress = function () {
+        let loading = `<div class="loading-img">
+        <img src="../logo-images/Spinner-2.gif" alt="">
+    </div>`;
+        document.getElementById("BooksId").innerHTML = loading;
+    }
+    xhr.onload = function () {
+        let data = JSON.parse(this.response);
+        let notesList = `<h2 style="color: black;">NOTES</h2>
+        <div class="scroll">
+        <ul>`;
+        for (const key in data.bca[semester]) {
+            notesList += `<li><b><a href="">${data.bca[semester][key]}</a></b></li>`
+        }
+        notesList += `</ul></div>`;
+        document.getElementById("BooksId").innerHTML = notesList;
+    }
+    xhr.send();
+}
+
+//EXAM PAPER
+function showExampaper(course) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '../json/examPaper.json', true);
+    xhr.onprogress = function () {
+        let loading = `<div class="loading-img">
+        <img src="../logo-images/Spinner-2.gif" alt="">
+    </div>`;
+        document.getElementById("list").innerHTML = loading;
+    }
+    xhr.onload = function () {
+        if (this.status == 200) {
+            let html = `<div class="semester semester-syl" data-aos="fade-up">
+            <h2 style="color:black;">SEMESTER<sub>(${course})</sub></h2>
+            <div class="scroll">
+            <ul>`;
+            let data = JSON.parse(this.response);
+            let i = 0;
+            for (const key in data[course]) {
+                html += `<li><b><a href="${data[course][key]}" target="_blank">Semester ${++i}</a></b></li>`;
+            }
+            html += `</ul></div></div>`
+            document.getElementById("list").innerHTML = html;
+        }
+        else {
+            console.log("error occured");
+        }
     }
     xhr.send();
 }
