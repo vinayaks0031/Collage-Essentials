@@ -150,6 +150,19 @@ background-color: white;
 
 }
 
+.notice{
+  font-size: 1.2em; 
+  width: 65%; 
+  text-align: center;
+  padding: 40px;
+  margin: auto;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  height: 60vh;
+}
+.notice>img{
+  width: 200px;
+  height: 200px;
+}
 .semester{
   width: 45%; 
   text-align: center;
