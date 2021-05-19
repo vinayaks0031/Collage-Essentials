@@ -12,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../logo-images/logo1.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>College Essentials</title>
 </head>
 <div class="head">
@@ -29,32 +30,38 @@
     </b>
 </div>
 <div class="con-card">
-    <div class="card">
-        <div class="img">
-            <img src="../logo-images/p1.jpg" alt="">
-        </div>
-        <div class="content">
-            <p>Here you can find some of the finest <b>Notes</b> of your <b>MCA</b> seniors.
-            </p>
-            <button id="mca" onclick="showExampaper(this.id)" class="btnbook">Click here</button>
-        </div>
-    </div>
-    <div class="card">
-        <div class="img">
-            <img src="../logo-images/p2.jpg" alt="">
-        </div>
-        <div class="content">
-            <p>Here you can find some of the finest <b>Notes</b> of your <b>INTEGRATED MCA</b> seniors</p>
-            <button id="ddmca" onclick="showExampaper(this.id)" class="btnbook">Click here</button>
+    <div data-aos="fade-up-right">
+        <div class="card">
+            <div class="img">
+                <img src="../logo-images/p1.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>Last year's exam papers of <b>MCA</b> are here to prepare and give your best in <b>exams</b>.</p>
+                <button id="mca" onclick="showExampaper(this.id)" class="btnbook">Click here</button>
+            </div>
         </div>
     </div>
-    <div class="card">
-        <div class="img">
-            <img src="../logo-images/p3.jpg" alt="">
+    <div data-aos="fade-down">
+        <div class="card">
+            <div class="img">
+                <img src="../logo-images/p2.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>Last year's exam papers of <b>INTEGRATED MCA</b> are here to prepare and give your best in
+                    <b>exams</b>.</p>
+                <button id="ddmca" onclick="showExampaper(this.id)" class="btnbook">Click here</button>
+            </div>
         </div>
-        <div class="content">
-            <p>Here you can find some of the finest <b>Notes</b> of your <b>BCA</b> seniors</p>
-            <button id="bca" onclick="showExampaper(this.id)" class="btnbook">Click here</button>
+    </div>
+    <div data-aos="fade-up-left">
+        <div class="card">
+            <div class="img">
+                <img src="../logo-images/p3.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>Last year's exam papers of <b>BCA</b> are here to prepare and give your best in <b>exams</b>.</p>
+                <button id="bca" onclick="showExampaper(this.id)" class="btnbook">Click here</button>
+            </div>
         </div>
     </div>
 </div>
@@ -64,20 +71,22 @@
 </div>
 
 
-<div class="footer">
+<div id="footer" class="footer">
     <p class="footer-heading"><b>Facing any problem</b></p>
     <h3>We are here to solve your problems. If you want to contribute content , we are happy to
         assist you.😁</h3><br>
     <div id="divform">
         <form class="contect-us" id="contect-us">
             <label for="query">write a message below</label><br>
-            <input type="text" minlength="10" required name="query" id="formquery" placeholder="Message...."><button
-                type="submit" class="btnform" id="btnmsg"><i class="fas fa-arrow-right fa-1x"></i></button>
+            <input type="text" required name="query" id="formquery" placeholder="Message...." minlength="10"
+                autocomplete="off"><button type="submit" class="btnform" id="btnmsg"><i
+                    class="fas fa-arrow-right fa-1x"></i></button>
         </form>
         <form class="contect-us" id="contect-us-email">
             <label for="query">write a message below</label><br>
-            <input type="email" required name="query" id="gmailquery" placeholder="Enter your Email"><button
-                type="submit" class="btnform"><i class="fas fa-arrow-right fa-1x"></i></button>
+            <input type="email" required name="query" id="gmailquery" placeholder="Enter your Email"
+                autocomplete="off"><button type="submit" class="btnform"><i
+                    class="fas fa-arrow-right fa-1x"></i></button>
         </form>
     </div>
     <br><br>
@@ -98,6 +107,10 @@
     </div>
 </div>
 <script src="../js/book.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
 </script>
 <script type="text/javascript">

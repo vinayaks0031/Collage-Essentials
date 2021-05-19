@@ -51,17 +51,17 @@ function showMcabook(course) {
         <ul>`;
             if (course == "mca") {
                 for (const key in data[course].semester1) {
-                    html += `<li><b><a href="${data.mcalink.semester1[key]}">${data[course].semester1[key]}</a></b></li>`;
+                    html += `<li><b><a href="${data.mcalink.semester1[key]}" target="_blank">${data[course].semester1[key]}</a></b></li>`;
                 }
             }
             else if (course == "ddmca") {
                 for (const key in data[course].semester1) {
-                    html += `<li><b><a href="${data.ddmcalink.semester1[key]}">${data[course].semester1[key]}</a></b></li>`;
+                    html += `<li><b><a href="${data.ddmcalink.semester1[key]}" target="_blank">${data[course].semester1[key]}</a></b></li>`;
                 }
             }
             else {
                 for (const key in data[course].semester1) {
-                    html += `<li><b><a href="">${data[course].semester1[key]}</a></b></li>`;
+                    html += `<li><b><a href="" target="_blank">${data[course].semester1[key]}</a></b></li>`;
                 }
             }
             html += `</ul>
@@ -160,7 +160,7 @@ function showmcaSyllabus(syllabus) {
     }
     xhr.onload = function () {
         if (this.status == 200) {
-            let html = `<div class="semester semester-syl" data-aos="fade-up">
+            let html = `<div class="semester semester-syl" data-aos="fade-left">
             <h2 style="color:black;">SEMESTER<sub>(${syllabus})</sub></h2>
             <div class="scroll">
             <ul>`;
@@ -223,7 +223,7 @@ function showmcaNotes(course) {
         <div class="scroll">
         <ul>`;
             for (const key in data[course].semester1) {
-                html += `<li><b><a href="">${data[course].semester1[key]}</a></b></li>`;
+                html += `<li><b><a href="" target="_blank">${data[course].semester1[key]}</a></b></li>`;
             }
             html += `</ul></div></div>`;
             document.getElementById("list").innerHTML = html;
@@ -250,7 +250,7 @@ function mcaNotes(semester) {
         <div class="scroll">
         <ul>`;
         for (const key in data.mca[semester]) {
-            notesList += `<li><b><a href="">${data.mca[semester][key]}</a></b></li>`
+            notesList += `<li><b><a href="" target="_blank">${data.mca[semester][key]}</a></b></li>`
         }
         notesList += `</ul></div>`;
         document.getElementById("BooksId").innerHTML = notesList;
@@ -275,7 +275,7 @@ function ddmcaNotes(semester) {
         <div class="scroll">
         <ul>`;
         for (const key in data.ddmca[semester]) {
-            notesList += `<li><b><a href="">${data.ddmca[semester][key]}</a></b></li>`
+            notesList += `<li><b><a href="" target="_blank">${data.ddmca[semester][key]}</a></b></li>`
         }
         notesList += `</ul></div>`;
         document.getElementById("BooksId").innerHTML = notesList;
@@ -299,7 +299,7 @@ function bcaNotes(semester) {
         <div class="scroll">
         <ul>`;
         for (const key in data.bca[semester]) {
-            notesList += `<li><b><a href="">${data.bca[semester][key]}</a></b></li>`
+            notesList += `<li><b><a href="" target="_blank">${data.bca[semester][key]}</a></b></li>`
         }
         notesList += `</ul></div>`;
         document.getElementById("BooksId").innerHTML = notesList;
@@ -319,7 +319,7 @@ function showExampaper(course) {
     }
     xhr.onload = function () {
         if (this.status == 200) {
-            let html = `<div class="semester semester-syl" data-aos="fade-up">
+            let html = `<div class="semester semester-syl" data-aos="fade-right">
             <h2 style="color:black;">SEMESTER<sub>(${course})</sub></h2>
             <div class="scroll">
             <ul>`;

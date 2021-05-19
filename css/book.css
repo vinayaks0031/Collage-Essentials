@@ -64,8 +64,12 @@ h1{
   margin: 0;
 }
 
-.con-card .card{
+.con-card>div{
   margin: auto;
+}
+
+.con-card >div >.card{
+  /* margin: auto; */
   /* margin-top:15% ; */
   height: 215px;
   width: 32vh; 
@@ -80,13 +84,13 @@ h1{
   transition: 0.3s ease-in-out;
 }
 
-.con-card .card:hover{
+.con-card> div> .card:hover{
 height: 420px;
 color: black;
 background-color: white;
 }
 
-.con-card .card .img{
+.con-card >div >.card .img{
   top: -60px;
   left: 20px;
   z-index: 1;
@@ -99,7 +103,7 @@ background-color: white;
   border-radius: 4px;
 }
 
-.con-card .card .content{
+.con-card >div> .card .content{
   margin-top: -140px;
   /* padding:10px 15px; */
   visibility: hidden; 
@@ -107,7 +111,7 @@ background-color: white;
   transition: 0.3s ease-in-out;
 }
 
-.con-card .card:hover .content{
+.con-card> div> .card:hover .content{
     visibility: visible;
     opacity: 1;
     margin-top: -1px;

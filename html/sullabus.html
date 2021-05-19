@@ -30,31 +30,37 @@
     </b>
 </div>
 <div class="con-card">
-    <div class="card">
-        <div class="img">
-            <img src="../logo-images/p1.jpg" alt="">
-        </div>
-        <div class="content">
-            <p>All the syllabus of <b>MCA</b> are here!</p>
-            <button id="mca" onclick="showmcaSyllabus(this.id)" class="btnbook">Click here</button>
-        </div>
-    </div>
-    <div class="card">
-        <div class="img">
-            <img src="../logo-images/p2.jpg" alt="">
-        </div>
-        <div class="content">
-            <p>All the syllabus of <b>INTEGRATED MCA</b> are here!</p>
-            <button id="ddmca" onclick="showmcaSyllabus(this.id)" class="btnbook">Click here</button>
+    <div data-aos="fade-down">
+        <div class="card">
+            <div class="img">
+                <img src="../logo-images/p1.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>All the syllabus of <b>MCA</b> are here!</p>
+                <button id="mca" onclick="showmcaSyllabus(this.id)" class="btnbook">Click here</button>
+            </div>
         </div>
     </div>
-    <div class="card">
-        <div class="img">
-            <img src="../logo-images/p3.jpg" alt="">
+    <div data-aos="fade-up">
+        <div class="card">
+            <div class="img">
+                <img src="../logo-images/p2.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>All the syllabus of <b>INTEGRATED MCA</b> are here!</p>
+                <button id="ddmca" onclick="showmcaSyllabus(this.id)" class="btnbook">Click here</button>
+            </div>
         </div>
-        <div class="content">
-            <p>All the syllabus of <b>BCA</b> are here!</p>
-            <button id="bca" onclick="showmcaSyllabus(this.id)" class="btnbook">Click here</button>
+    </div>
+    <div data-aos="fade-down">
+        <div class="card">
+            <div class="img">
+                <img src="../logo-images/p3.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>All the syllabus of <b>BCA</b> are here!</p>
+                <button id="bca" onclick="showmcaSyllabus(this.id)" class="btnbook">Click here</button>
+            </div>
         </div>
     </div>
 </div>
@@ -68,13 +74,15 @@
     <div id="divform">
         <form class="contect-us" id="contect-us">
             <label for="query">write a message below</label><br>
-            <input type="text" minlength="10" required name="query" id="formquery" placeholder="Message...."><button
-                type="submit" class="btnform" id="btnmsg"><i class="fas fa-arrow-right fa-1x"></i></button>
+            <input type="text" required name="query" id="formquery" placeholder="Message...." minlength="10"
+                autocomplete="off"><button type="submit" class="btnform" id="btnmsg"><i
+                    class="fas fa-arrow-right fa-1x"></i></button>
         </form>
         <form class="contect-us" id="contect-us-email">
             <label for="query">write a message below</label><br>
-            <input type="email" required name="query" id="gmailquery" placeholder="Enter your Email"><button
-                type="submit" class="btnform"><i class="fas fa-arrow-right fa-1x"></i></button>
+            <input type="email" required name="query" id="gmailquery" placeholder="Enter your Email"
+                autocomplete="off"><button type="submit" class="btnform"><i
+                    class="fas fa-arrow-right fa-1x"></i></button>
         </form>
     </div>
     <br><br>
