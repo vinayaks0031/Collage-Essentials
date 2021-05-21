@@ -90,7 +90,7 @@ function rightslide() {
   i++;
   if (i == 3) {
     let html = ` <div class="trans">
-        <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
+        <h1 class="slider-heading" style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
         <div class="slider">
         <button class="btn" id="lbtn" onclick="leftslide()"><i class="fas fa-arrow-left fa-2x"></i></button>
         <img src="${img[i]}" class="img-slide">
@@ -103,7 +103,7 @@ function rightslide() {
     div.innerHTML = html;
   } else {
     let html = ` <div class="trans">
-    <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
+    <h1 class="slider-heading" style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
     <div class="slider">
     <button class="btn" id="lbtn" onclick="leftslide()"><i class="fas fa-arrow-left fa-2x"></i></button>
     <img src="${img[i]}" class="img-slide">
@@ -120,7 +120,7 @@ function leftslide() {
   i--;
   if (i == 0) {
     let html = ` <div class="trans">
-        <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
+        <h1 class="slider-heading" style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
         <div class="slider">
         <button class="btn" id="lbtn" onclick="leftslide()"><i style="display: none;" class="fas fa-arrow-right fa-2x"></i>
         </button>
@@ -133,7 +133,7 @@ function leftslide() {
     div.innerHTML = html;
   } else {
     let html = `<div class="trans">
-    <h1 style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
+    <h1 class="slider-heading" style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
     <div class="slider">
     <button class="btn" id="lbtn" onclick="leftslide()"><i class="fas fa-arrow-left fa-2x"></i></button>
     <img src="${img[i]}" class="img-slide">
@@ -182,3 +182,31 @@ function getemail(e) {
     });
 }
 
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml14 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({ loop: false })
+  .add({
+    targets: '.ml14 .line',
+    scaleX: [0, 1],
+    opacity: [0.5, 1],
+    easing: "easeInOutExpo",
+    duration: 900
+  }).add({
+    targets: '.ml14 .letter',
+    opacity: [0, 1],
+    translateX: [40, 0],
+    translateZ: 0,
+    scaleX: [0.3, 1],
+    easing: "easeOutExpo",
+    duration: 800,
+    offset: '-=600',
+    delay: (el, i) => 150 + 25 * i
+  }).add({
+    targets: '.ml14',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
