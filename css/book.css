@@ -251,20 +251,166 @@ background-color: white;
  
 }
 
-li:hover{
+.scroll li:hover{
   background-color:#3c75df;
   transition: 0.2s ease;
 }
 
-li b >a{
+.scroll li b >a{
   text-decoration: none;
   color: black;
   cursor: pointer;
 }
 
-li:hover b >a{
+.scroll li:hover b >a{
   color: white;
 }
+/*  PLACEMENT PAGE */
+
+.placement-header{
+  height: auto;
+  background-color: #3c75df;
+  display: flex;
+}
+.placement-header>div{
+  width: 47%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding-left:3%;
+  /* border: 1px solid black; */
+}
+
+.placement-header>div>h1{
+  margin: 0%;
+}
+.placement-header>div>img{
+  width: 90%;
+  height: 600px;
+}
+
+.ml15 {
+  font-weight: 800;
+  font-size: 3.9em;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.1em;
+}
+
+.bca-mca{
+  margin: 2% 0% 0% 7%;
+}
+.bca-mca a{
+  padding: 1%;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #06125a;
+}
+#bcalink{
+  text-decoration: underline #324cda;
+
+}
+.bca-mca a:hover{
+  text-decoration: underline #324cda;
+
+}
+
+.bca-section{
+  display: flex;
+  margin: 2% 4%;
+
+}
+
+
+.bca-section>div{
+  width: 45%;
+  /* border: 1px solid black; */
+  margin: auto;
+}
+
+.bca-section>div>.h{
+  font-size: 1.5em;
+}
+.bca-section>div>p{
+  font-size: 18px;
+}
+
+.card-container{
+  display: flex;
+  margin: 0%;
+  padding:0%;
+}
+
+
+.bca-card{
+  cursor: pointer;
+  width: 55%;
+  margin:  4% 0%;
+  /* border: 1px solid black; */
+  border-radius: 8px;
+  box-shadow : 0 15px 20px rgba(0, 0, 0, 0.2);
+height: 250px;
+  padding: 20px;
+}
+
+.card-container a{
+  text-decoration: none;
+  color: black;
+}
+
+.bca-card:hover{
+background-color: #3c75df;
+color: white;
+transition: 0.5s ease;
+}
+
+.bca-card>img{
+padding:5px ;
+background-color: #3c75df;
+/* border: 1px solid black; */
+border-radius:50% ;
+height: 40px;
+width: 40px;
+}
+
+.bca-card:hover>img{
+  background-color: white;
+  transition: 0.5s ease;
+}
+
+.job{
+  margin: 2% 8% 2% 5% ;
+  box-shadow : 0 15px 20px rgba(0, 0, 0, 0.2);
+padding: 3%;
+  font-size: 18px;
+}
+
+.job-head{
+  color: #06125a;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+.logo-svg{
+  border-radius:50% ;
+height: 40px;
+width: 40px;
+}
+
+table{
+  width: 80%;
+  text-align: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th{
+    border: 1px solid black;
+    padding: 1%;
+}
+td{
+  border: 1px solid black;
+  padding: 1%;
+}
+/*  */
+
 .footer{
     height: 490px;
     background-color: #e75858;
