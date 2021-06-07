@@ -13,14 +13,14 @@ let html = `<div style="display:none;" id="mca-content">
 </div>
 <div class="card-container">
 <div>
-    <a href="#JOB-blog">
+    <a href="#JOBmca-blog">
         <div class="bca-card">
             <img src="../logo-images/suitcase.png" alt="">
             <p><b>Profiles for Job</b></p>
             <p>After MCA you lots of Job profile that you can choose as per your interest.</p>
         </div>
     </a>
-    <a href="#MCA-blog">
+    <a href="#MCAo-blog">
         <div class="bca-card">
             <img src="../logo-images/tools-and-utensils.svg" alt="">
             <p><b>On-Campus and Off-Campus Placement</b></p>
@@ -30,14 +30,14 @@ let html = `<div style="display:none;" id="mca-content">
 </div>
 <div>
     <br><br>
-    <a href="#MBA-blog">
+    <a href="#top-blog">
         <div class="bca-card">
             <img src="../logo-images/programming.png" alt="">
             <p><b>Top Companies</b></p>
             <p>List of Top and best IT companies for MCA students.</p>
         </div>
     </a>
-    <a href="#GOVT">
+    <a href="#GOVTmca">
         <div class="bca-card">
             <img src="../logo-images/embassy.png" alt="">
             <p><b>Govt. Job</b></p>
@@ -48,7 +48,7 @@ let html = `<div style="display:none;" id="mca-content">
 </div>
 </div>
 <br><br>
-<div id="JOB-blog" class="job" data-aos="zoom-out">
+<div id="JOBmca-blog" class="job" data-aos="zoom-out">
 <p class="job-head"><b>Profiles for Job</b></p>
 <p>
 MCA degree programme gives candidates an opportunity to work as a professional with different job roles.
@@ -107,7 +107,7 @@ Some of the job roles for an MCA passed out candidates is listed below:
 </dl>
 <p>These are some popular job profiles for a MCA student For more option just Search on google.</p>
 </div>
-<div id="MCA-blog" class="job" data-aos="zoom-in">
+<div id="MCAo-blog" class="job" data-aos="zoom-in">
 <p class="job-head"><b>On-Campus Off-Campus Placement</b></p>
 <p>There are mainly two types of campus placements – On Campus Placement and Off-Campus.</p>
 <h3>On-Campus Placement</h3>
@@ -165,7 +165,7 @@ a Job through Off-Campus.</p>
 </dl>
 
 </div>
-<div id="MBA-blog" class="job" data-aos="flip-down">
+<div id="top-blog" class="job" data-aos="flip-down">
 <p class="job-head"><b>Top Companies for MCA Students</b></p>
 <h3>Top Product Based Companies(Tech Giants)</h3>
 <ol>
@@ -202,7 +202,7 @@ a Job through Off-Campus.</p>
 <li> Aricent</li>
 </ol>
 </div>
-<div id="GOVT" class="job" data-aos="zoom-out-down">
+<div id="GOVTmca" class="job" data-aos="zoom-out-down">
 <p class="job-head"><b>Government Job After MCA</b></p>
 <p>Apart from private jobs, there are various government jobs available for MCA passed out candidates. Those
 who wish to apply for government jobs after MCA must check for government job openings. The list of

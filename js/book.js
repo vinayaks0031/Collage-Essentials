@@ -61,7 +61,7 @@ function showMcabook(course) {
             }
             else {
                 for (const key in data[course].semester1) {
-                    html += `<li><b><a href="" target="_blank">${data[course].semester1[key]}</a></b></li>`;
+                    html += `<li><b><a href="${data.bcalink.semester1[key]}" target="_blank">${data[course].semester1[key]}</a></b></li>`;
                 }
             }
             html += `</ul>
@@ -138,7 +138,7 @@ function bcaBooks(semester) {
         <div class="scroll">
         <ul>`;
         for (const key in data.bca[semester]) {
-            bookList += `<li><b><a href="" target="_blank">${data.bca[semester][key]}</a></b></li>`;
+            bookList += `<li><b><a href="${data.bcalink[semester][key]}" target="_blank">${data.bca[semester][key]}</a></b></li>`;
         }
         bookList += `</ul></div>`;
         document.getElementById("BooksId").innerHTML = bookList;
