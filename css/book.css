@@ -524,6 +524,58 @@ td{
       .semester .scroll{
         height: 35vh;
       }
+      .placement-header{
+        display: flex;
+        flex-direction: column;
+      }
+      .placement-header>div{
+        width: 100%;
+        margin: 0%;
+        text-align: left;
+        justify-content:left;
+        align-items:baseline;
+      }
+      .ml15 {
+        font-weight: 800;
+        font-size: 1.9em;
+        /* text-transform: uppercase; */
+        letter-spacing: 0.1em;
+      }
+      .placement-header>div>img{
+        width: 70%;
+        margin: 10%;
+        height: auto;
+      }
+      .bca-mca a{
+        padding: 2%;
+        font-size: 1.2em;
+      }
+      .bca-section{
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+      
+      }
+      .bca-section>div{
+        width: 100%;
+        /* border: 1px solid black; */
+        margin: 0% 4%;
+      }
+      .bca-card{
+        cursor: pointer;
+        width: 50%;
+        margin: 2%;
+        height: auto;
+        padding: 20px;
+      }
+      .job{
+        margin: 5% ;
+        padding: 3%;
+        font-size: 18px;
+      }
+      table{
+        width: 100%;
+      }
       .footer{
         margin: 0%;
         height: auto;
@@ -595,6 +647,58 @@ td{
         margin: 2%;
         margin-bottom: 7%;
       }
+      .placement-header{
+        display: flex;
+        flex-direction: column;
+      }
+      .placement-header>div{
+        width: 100%;
+        margin: 0%;
+        text-align: left;
+        justify-content:left;
+        align-items:baseline;
+      }
+      .ml15 {
+        font-weight: 800;
+        font-size: 1.9em;
+        /* text-transform: uppercase; */
+        letter-spacing: 0.1em;
+      }
+      .placement-header>div>img{
+        width: 70%;
+        margin: 10%;
+        height: auto;
+      }
+      .bca-mca a{
+        padding: 2%;
+        font-size: 1.2em;
+      }
+      .bca-section{
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+      
+      }
+      .bca-section>div{
+        width: 100%;
+        /* border: 1px solid black; */
+        margin: 0% 4%;
+      }
+      .bca-card{
+        cursor: pointer;
+        width: 90%;
+        margin: 2%;
+        height: auto;
+        padding: 20px;
+      }
+      .job{
+        margin: 5% ;
+        padding: 3%;
+        font-size: 18px;
+      }
+      table{
+        width: 100%;
+      }
       .footer{
         margin: 0%;
         height: auto;
@@ -621,4 +725,28 @@ td{
     padding-right:0.9px;
     font-size: 0.8em;
     }
+}
+@media screen and (orientation:landscape) {
+  .con-card >div >.card{
+    width:85% ; 
+  }
+  .semester{
+    background-color:rgba(241, 245, 250, 0.842); 
+  width: 90%; 
+  padding: 40px;
+  margin: 7% 3% auto 3%;
+  height: auto;
+}
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .con-card >div >.card{
+    width:80% ;
+    margin-left: 10%;
+  }
+}
+@media screen and (device-aspect-ratio: 375/667) {
+  .con-card >div >.card{
+    width:70% ;
+    margin-left: 15%;
+  }
 }
