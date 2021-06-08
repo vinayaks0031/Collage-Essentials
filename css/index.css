@@ -41,6 +41,7 @@ body {
 
 
 .nav {
+  z-index: 999;
   margin: 0%;
   text-align: center;
   background-color: #e6e1c1;
@@ -431,3 +432,10 @@ i.fa-5x {
       padding: 4%;
     }
 } 
+@media (max-width: 365px) {
+  .nav b > a {
+    padding-right:0.9px;
+    font-size: 0.8em;
+    
+  }
+}
