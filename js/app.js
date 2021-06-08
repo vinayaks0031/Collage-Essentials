@@ -33,7 +33,7 @@ function rightslide() {
         <p>by  <b class="bold">${name[i]}</b></p>
         </div>`;
     div.innerHTML = html;
-  } else {
+  } else if (i < 3 && i >= 0) {
     let html = ` <div class="trans">
     <h1 class="slider-heading" style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
     <div class="slider">
@@ -63,7 +63,7 @@ function leftslide() {
         <p>by  <b class="bold">${name[i]}</b></p>
         </div>`;
     div.innerHTML = html;
-  } else {
+  } else if (i <= 3 && i > 0) {
     let html = `<div class="trans">
     <h1 class="slider-heading" style="font-family: Nunito, sans-serif;">Inspiring Quotes.</h1><br><br>
     <div class="slider">
@@ -142,8 +142,3 @@ anime.timeline({ loop: false })
     easing: "easeOutExpo",
     delay: 1000
   });
-
-let navicon = document.getElementById("navicon");
-navicon.addEventListener('click', () => {
-  navicon.style.transform = "rotate(90deg)";
-})

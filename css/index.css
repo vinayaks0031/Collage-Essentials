@@ -298,16 +298,6 @@ i.fa-5x {
 .nav{
   padding: 2%;
 }
-  i.fa-bars {
-    padding-right:10px ;
-    opacity: 0;
-    color: #e75858;
-    transition:all 0.03s;
-    } 
-    
-    /* .nav b > a{
-      display: block;
-    } */
     .text {
       margin: 0%;
       padding: 0%;
@@ -321,25 +311,50 @@ i.fa-5x {
       width: 69%;
     }
     .info {
-      margin: 4% 2% 4% 5%;
+      margin: 4%;
     }
     .qots {
-      margin: 2% 3% 0% 3%;
+      margin:0% ;
+      margin-top: 10%;
       padding: auto;
       height: auto;
-      background-color: #5085b6;
       display: flex;
       flex-direction: column;
     }
     .qots > div {
-      text-align: center;
-      background-color: whitesmoke;
       margin: 9% auto;
-      padding: 0.5%;
-      height: 400px;
-      width: 42%;
-      display: flex;
+      padding: 3%;
+      width: 40%;
+    }
+    .slider-heading{
+      font-size: 29px;
+    }
+    .img-slide {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+    }
+    .slide {
+      height: 450px;
+    }
+    .footer{
+      margin: 0%;
+      height: auto;
+    }
+    .footer-heading{
+      font-size: 35px;
+      padding-top:2%;
+    }
+    .contect-us > input{
+      width: 70%;
+    }
+    .last{
+      text-align: center;
+      display:flex;
       flex-direction: column;
+    }
+    .footer>h3{
+      padding: 4%;
     }
     
 } 
@@ -349,19 +364,14 @@ i.fa-5x {
     width: 150px;
     height: 150px;
   }
-.nav{
+  .nav b > a {
+    padding-right:0.9px;
+    font-size: 1em;
+  } 
+  .nav{
   padding: 3%;
-}
-  i.fa-bars {
-    padding-right:10px ;
-    opacity: 0;
-    color: #e75858;
-    transition:all 0.03s;
-    } 
-    
-    /* .nav b > a{
-      display: block;
-    } */
+  justify-content:inherit;
+  }
     .text {
       margin: 0%;
       padding: 0%;
@@ -370,14 +380,16 @@ i.fa-5x {
       text-align: center;
     }
     .text>img {
-      margin:10%;
-      width: 80%;
+      padding: 0% ;
+      width: 75%;
     }
     .info {
-      margin: 4% 2% 4% 5%;
+      margin: 5%;
+      /* text-align: center; */
     }
     .qots {
-      margin: 2% 3% 0% 3%;
+      margin:0% ;
+      margin-top: 10%;
       padding: auto;
       height: auto;
       display: flex;
@@ -400,6 +412,7 @@ i.fa-5x {
       height: 450px;
     }
     .footer{
+      margin: 0%;
       height: auto;
     }
     .footer-heading{

@@ -97,15 +97,10 @@ h1{
 }
 
 .con-card >div >.card{
-  /* margin: auto; */
-  /* margin-top:15% ; */
   height: 215px;
   width: 32vh; 
   text-align: center;
-  /* display: flex;
-  flex-direction: column  ; */
   border: 2px solid #3c75df;
-  /* background: #ebf1f7; */
   padding: 20px 15px;
   color: white;
   box-shadow : 0 15px 20px rgba(0, 0, 0, 0.2);
@@ -248,7 +243,6 @@ background-color: white;
 .semester ul li{
   padding: 2%;
   margin: 2%;
- 
 }
 
 .scroll li:hover{
@@ -481,3 +475,138 @@ td{
   #contect-us-email{
     display: none;
   }
+
+  
+@media (max-width: 782px) {
+  .bnav > a {
+      padding-right:0.9px;
+      font-size: 1em;
+      } 
+      .navbar{
+      padding: 3%;
+      justify-content:inherit;
+      }
+      .con-card{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15%;
+
+      }
+      .card{
+        margin-top:29% ;
+        margin-bottom: 10%;
+      }
+      .notice{
+        font-size: 1.2em; 
+        width: 90%; 
+        height: 65vh;
+      }
+      .list{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 10%;
+      }
+      .semester{
+        width: 80%; 
+        padding: 40px;
+        margin: auto;
+        height: 50vh;
+        margin-top:5% ;
+      }
+      .semester h2{
+        color: black;
+      }
+      .semester .scroll{
+        height: 35vh;
+      }
+      .footer{
+        margin: 0%;
+        height: auto;
+      }
+      .footer-heading{
+        font-size: 32px;
+        padding-top:2%;
+      }
+      .contect-us > input{
+        width: 70%;
+      }
+      .last{
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+      }
+      .footer>h3{
+        padding: 4%;
+      }
+}
+
+  @media (max-width: 430px) {
+      .bnav > a {
+      padding-right:0.9px;
+      font-size: 1em;
+      } 
+      .navbar{
+      padding: 3%;
+      justify-content:inherit;
+      }
+      .con-card{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 27%;
+      }
+      .card{
+        margin-top:29% ;
+        margin-bottom: 10%;
+      }
+      .list{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+      }
+      .notice{
+        font-size: 1.2em; 
+        width: 90%; 
+        height: 70vh;
+      }
+      
+      .semester{
+        width: 90%; 
+        padding: 40px;
+        margin: 7% 3% auto 3%;
+        height: 50vh;
+      }
+      .semester h2{
+        color: black;
+      }
+      .semester .scroll{
+        height: 35vh;
+      }
+      .semester ul li{
+        padding: 2%;
+        margin: 2%;
+        margin-bottom: 3%;
+      }
+      .footer{
+        margin: 0%;
+        height: auto;
+      }
+      .footer-heading{
+        font-size: 32px;
+        padding-top:2%;
+      }
+      .contect-us > input{
+        width: 70%;
+      }
+      .last{
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+      }
+      .footer>h3{
+        padding: 4%;
+      }
+  } 
+  
