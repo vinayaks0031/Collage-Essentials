@@ -98,7 +98,7 @@ h1{
 
 .con-card >div >.card{
   height: 215px;
-  width: 32vh; 
+  width: 250px; 
   text-align: center;
   border: 2px solid #3c75df;
   padding: 20px 15px;
@@ -478,7 +478,7 @@ td{
   }
 
   
-@media (max-width: 782px) {
+ @media (max-width: 782px) {
   .bnav > a {
       padding-right:0.9px;
       font-size: 1em;
@@ -538,7 +538,6 @@ td{
       .ml15 {
         font-weight: 800;
         font-size: 1.9em;
-        /* text-transform: uppercase; */
         letter-spacing: 0.1em;
       }
       .placement-header>div>img{
@@ -558,7 +557,6 @@ td{
       }
       .bca-section>div{
         width: 100%;
-        /* border: 1px solid black; */
         margin: 0% 4%;
       }
       .bca-card{
@@ -613,7 +611,6 @@ td{
         margin-bottom: 27%;
       }
       .con-card >div >.card{
-        /* width:70% ; */
         margin-top:29% ;
         margin-bottom: 10%;
       }
@@ -648,6 +645,7 @@ td{
         margin-bottom: 7%;
       }
       .placement-header{
+        width: 100%;
         display: flex;
         flex-direction: column;
       }
@@ -661,7 +659,6 @@ td{
       .ml15 {
         font-weight: 800;
         font-size: 1.9em;
-        /* text-transform: uppercase; */
         letter-spacing: 0.1em;
       }
       .placement-header>div>img{
@@ -679,10 +676,8 @@ td{
         margin: 0%;
       
       }
-      .bca-section>div{
-        width: 100%;
-        /* border: 1px solid black; */
-        margin: 0% 4%;
+      .bca-section > div{
+        width: 90%;
       }
       .bca-card{
         cursor: pointer;
@@ -727,9 +722,7 @@ td{
     }
 }
 @media screen and (orientation:landscape) {
-  .con-card >div >.card{
-    width:85% ; 
-  }
+
   .semester{
     background-color:rgba(241, 245, 250, 0.842); 
   width: 90%; 
@@ -737,16 +730,4 @@ td{
   margin: 7% 3% auto 3%;
   height: auto;
 }
-}
-@media screen and (device-aspect-ratio: 40/71) {
-  .con-card >div >.card{
-    width:80% ;
-    margin-left: 10%;
-  }
-}
-@media screen and (device-aspect-ratio: 375/667) {
-  .con-card >div >.card{
-    width:70% ;
-    margin-left: 15%;
-  }
 }
