@@ -1,5 +1,4 @@
-console.log("hey there");
-
+// slider functions
 
 let div = document.querySelector("div.slide");
 let img = [
@@ -79,6 +78,8 @@ function leftslide() {
 }
 
 
+//Email js
+
 let Params = {
   to_name: 'Vinayak Sharma',
   from_name: '',
@@ -114,6 +115,7 @@ function getemail(e) {
     });
 }
 
+//head text animation
 // Wrap every letter in a span
 var textWrapper = document.querySelector('.ml14 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");

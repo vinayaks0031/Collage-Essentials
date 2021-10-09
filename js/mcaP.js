@@ -1,3 +1,5 @@
+//placement fields Data
+
 let div = document.getElementById("contentDiv");
 let html = `<div style="display:none;" id="mca-content">
     <div class="bca-section" id="mca-content" data-aos="zoom-in-down">
@@ -238,6 +240,7 @@ government jobs after MCA is given below:</p>
 </div>`;
 div.innerHTML += html;
 
+//changing data onClick
 
 let bcalink = document.getElementById("bcalink");
 bcalink.addEventListener('click', showBcAplacement);

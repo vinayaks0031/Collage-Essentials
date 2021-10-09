@@ -1,11 +1,4 @@
-//ASYNC AWAIT
 
-// async function mcaBooks(semester) {
-//     let response = await fetch('../json//bookmca.json');
-//     let data = await response.json();
-//     console.log(data);
-//     // console.log(data[semester]);
-// }
 
 //MCA book button//
 
