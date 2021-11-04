@@ -1,12 +1,12 @@
-#College Essentials
+# College Essentials
 
 College Essentials is a platform where BCA and MCA students will find all the essential things related to their studies like Notes, Books, practice programs n questions, Past year exam papers, syllabus etc. 
 
-##Live
+## Live
 
 The website is live at [vm-collagewebsite.netlify.app](https://vm-collagewebsite.netlify.app/). Please make sure to check out the website.
 
-##usage
+## usage
 
 The website is very handy to use you will find all things in the home page. I have attached some of the screenshots of the application below.
 
