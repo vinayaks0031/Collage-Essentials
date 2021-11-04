@@ -80,7 +80,7 @@ h1{
 /*  */
 
 .con-card{
-  background-image: url("../logo-images/Abract01.png");
+  background-image: url("../logo&images/Abract01.png");
   background-repeat: no-repeat ;
   background-position: right;
   width: 100%;
@@ -161,7 +161,7 @@ background-color: white;
 
 .list{
   height: 80vh;
-  background-image: url("../logo-images/Abract02.png");
+  background-image: url("../logo&images/Abract02.png");
   background-position: left;
   background-repeat: no-repeat;
   display: flex;
